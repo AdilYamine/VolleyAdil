@@ -1,0 +1,2857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+		.shake {
+			animation: shake-animation 3.5s ease infinite;
+			transform-origin: 50% 50%;
+		}
+		
+		@keyframes shake-animation {
+			0% { transform:translate(0,0) }
+			1.78571% { transform:rotate(6deg) } 
+			3.57143% { transform:translate(0,0) }
+			5.35714% { transform:rotate(6deg) }
+			7.14286% { transform:translate(0,0) }
+			8.92857% { transform:rotate(6deg) }
+			10.71429% { transform:translate(0,0) }
+			11.78571% { transform:rotate(6deg) } 
+			13.57143% { transform:translate(0,0) }
+			15.35714% { transform:rotate(6deg) }
+			17.14286% { transform:translate(0,0) }
+			18.92857% { transform:rotate(6deg) }
+			20.71429% { transform:translate(0,0) }
+			21.78571% { transform:rotate(6deg) } 
+			23.57143% { transform:translate(0,0) }
+			25.35714% { transform:rotate(6deg) }
+			27.14286% { transform:translate(0,0) }
+			28.92857% { transform:rotate(6deg) }
+			30.71429% { transform:translate(0,0) }
+			30.71429% { transform:translate(0,0) }
+			31.78571% { transform:rotate(6deg) } 
+			33.57143% { transform:translate(0,0) }
+			35.35714% { transform:rotate(6deg) }
+			37.14286% { transform:translate(0,0) }
+			38.92857% { transform:rotate(6deg) }
+			40.71429% { transform:translate(0,0) }
+			40.71429% { transform:translate(0,0) }
+			41.78571% { transform:rotate(6deg) } 
+			43.57143% { transform:translate(0,0) }
+			45.35714% { transform:rotate(6deg) }
+			47.14286% { transform:translate(0,0) }
+			48.92857% { transform:rotate(6deg) }
+			50.71429% { transform:translate(0,0) }
+			100% { transform:translate(0,0) }
+		}
+        .case2-wrapped{
+            position: relative;
+            width: 100%
+        }
+        .case2-wrapped:after{
+            content:" ";
+            position: absolute;
+            background: url('InShot_20231113_212656171 (1).png');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+            left: 135px;
+            bottom: 35px;
+        }
+        
+        .win-wrapped:after{
+            content:" ";
+            position: absolute;
+            background: url('InShot_20231111_055204035 (1).png');
+            background-size: cover;
+            width: 180px;
+            height: 170px;
+            left: 120px;
+            top: 30px;
+        } 
+		
+        .next::before {
+			font-family: fontAwesome;
+			content: "\f04e\00a0";
+            font-size: 17pt;
+         }
+		
+        .next::after {
+			font-family: fontAwesome;
+			content: "\00a0\f04e";
+            font-size: 17pt;
+         }
+		
+        .crown::after {
+			font-family: fontAwesome;
+			content: "\00a0\f521";
+            font-size: 17pt;
+         }
+		
+        .serve1::before {
+			font-family: fontAwesome;
+			content: "\f45f\00a0";
+            font-size: 17pt;
+         }
+
+		.serve2::after {
+			font-family: fontAwesome;
+			content: "\00a0\f45f";
+            font-size: 17pt;
+         }
+
+        .content {
+            margin: auto;
+            width: 100%;
+            xpadding: 10px;
+            text-align: center;
+            xborder: 3px solid #e9ed74;
+			background-color:grey;
+		}
+        .case1 {
+            border: 2px solid;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 40pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+			border-color: black;
+        }
+        .case2 {
+            border: 2px solid;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 70pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+			border-color: black;
+        }
+		.case3 {
+            border: 2px solid;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 10pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+			border-color: black;
+			  &:hover
+				transform: rotate(0deg)
+				animation-name: shake
+				animation-duration: .2s
+				animation-iteration-count: infinite
+				animation-timing-function: linear
+				
+			@keyframes shake
+			0% 
+				bottom: -10px
+        }
+		.case4 {
+            border: 2px solid;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+			border-color: black;
+        }
+		.case5 {
+            border: 2px solid;
+            width: 160px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+		.case6 {
+            border: 2px solid;
+            width: 50px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+		.case7 {
+            width: 160px;
+            height: 170px;
+			font-size: 110pt;
+            text-align: right;
+            vertical-align: middle;
+            font-family: digital;
+        }
+		.case8 {
+            width: 10px;
+            height: 170px;
+			font-size: 100pt;
+            text-align: center;
+            vertical-align: middle;
+            font-family: digital;
+        }
+		.case9 {
+            width: 160px;
+            height: 170px;
+			font-size: 110pt;
+            text-align: center;
+            vertical-align: middle;
+            font-family: digital;
+        }
+		.case10 {
+            border: 0,5px;
+            width: 50px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+			border-color: black;
+        }
+		.case11 {
+            border: 2px solid;
+            width: 52px;
+            height: 15px;
+            text-align: left;
+            vertical-align: middle;
+            font-size: 10pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+			border-color: black;
+        }
+		
+		.case13 {
+            width: 205px;
+            height: 30px;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+		
+        .title {
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    
+        td.trophy::before {
+			font-family: fontAwesome;
+			content: "\f091\00a0\00a0";
+         } 
+        
+        button.back::before {
+			font-family: fontAwesome;
+			content: "\f112\00a0\00a0";
+        } 
+        
+        button.forward::after {
+			font-family: fontAwesome;
+			content: "\00a0\f064";
+        }
+        
+        button.start::before {
+			font-family: fontAwesome;
+			content: "\f04b\00a0\00a0";
+        } 
+        
+        button.pause::before {
+			font-family: fontAwesome;
+			content: "\f04c\00a0\00a0";
+        }
+        
+        button.addPlayer::before {
+			font-family: fontAwesome;
+			content: "\f234\00a0\00a0";
+        }
+		
+        button.deletePlayer::before {
+			font-family: fontAwesome;
+			content: "\f503\00a0\00a0";
+        }
+				
+        button.TeamGear::before {
+			font-family: fontAwesome;
+			content: "\f4fe\00a0\00a0";
+        }
+          
+        @font-face{
+          font-family:digital;
+          src: url("https://db.onlinewebfonts.com/t/63f874d192fb3892d88d5e26f942b5e2.woff")format("woff");
+        }
+    </style>
+    <script>
+        var scores = [
+            ['#ee8a07', 0],
+            ['#00cc99', 0],
+            ['#76bae7', 0],
+            ['#1045fb', 0]
+        ];
+		
+        var scores_back = null;
+		var nom_back = null;
+		var game_over = true;
+		var tab = [];
+		var serviceOut = [];
+		var serveTeam = [
+            ['#ee8a07', 0],
+            ['#00cc99', 0],
+            ['#76bae7', 0],
+            ['#1045fb', 0],
+        ];
+				
+		var nom = [
+            ['#ee8a07', ""],
+            ['#00cc99', ""],
+            ['#76bae7', ""],
+            ['#1045fb', ""],
+        ];
+		
+		var tabScoresBack = [];
+		var tabNomsBack = [];
+		var rb = false;
+		var a=0;b=0;c=0;d=0;e=0;h=0;g=0;k=0;
+		var serviceFaultTag;
+//		var testLastServiceIsFault;
+		var gameResult = [];
+		var matchResult = [];				
+		var player1NameTeam1, player2NameTeam1,player1NameTeam2, player2NameTeam2, player1NameTeam3, player2NameTeam3, player1NameTeam4, player2NameTeam4, player1NameTeam5, player2NameTeam5, player1NameTeam6, player2NameTeam6, player1NameTeam7, player2NameTeam7, player1NameTeam8, player2NameTeam8, servicePlayer1Name,servicePlayer2Name;		
+		var statAllGames = [];
+		var games=0;
+		var winnerTab=[];
+		var setTab=[[0,0,0,0,0,0,0,0,0,0,0,0]];
+		
+        function f(a) { 
+		
+			if (rollbackCounter > 0){gameResult = gameResult.slice(0, -rollbackCounter);} 
+			
+			rollbackCounter = 0;
+			forwardCounter = 0;
+			//testLastServiceIsFault = false;
+			servicePlayerName();	
+			var playerCount=scores.length;
+            if(a == 2) { 
+			if (game_over == false){
+				 
+				serviceCount();
+			
+                var tmp = scores[playerCount-2]; 
+				for (let i = playerCount-2; i > 0; i--) {
+                scores[i] = scores[i-1];
+				}
+				scores[0] = scores[playerCount-1];
+				scores[playerCount-1] = tmp;
+				
+                var tmp = nom[playerCount-2];
+				for (let i = playerCount-2; i > 0; i--) {
+                nom[i] = nom[i-1];
+				}
+				nom[0] = nom[playerCount-1];
+				nom[playerCount-1] = tmp;
+								
+				scores_back = clone(scores);
+				nom_back = clone(nom);			
+				tabScoresBack.push(scores_back);
+				tabNomsBack.push(nom_back);
+				gameResult.push([scores[playerCount-2][0],2]);
+				matchResult.push([scores[playerCount-1][0],"win"],[scores[0][0],"lost"],);
+				}
+            } else if (a == 1) { 
+			if (game_over == false){
+			 
+				serviceCount();
+                scores[playerCount-1][1] = scores[playerCount-1][1] + 1; 
+                var tmp = scores[playerCount-2]; 
+				for (let i = playerCount-2; i > 0; i--) {
+                scores[i] = scores[i-1];
+				}
+                scores[0] = tmp;
+				
+                var tmp = nom[playerCount-2]; 
+				for (let i = playerCount-2; i > 0; i--) {
+                nom[i] = nom[i-1];
+				}
+                nom[0] = tmp;
+				
+				scores_back = clone(scores);
+				nom_back = clone(nom);			
+				tabScoresBack.push(scores_back);
+				tabNomsBack.push(nom_back);
+				gameResult.push([scores[playerCount-2][0],1]);
+				matchResult.push([scores[0][0],"lost"],[scores[playerCount-1][0],"win"],);
+				}
+            } else if (a == 3) { 
+				serviceCount();
+				serviceFaultTag = true;
+				 
+                var tmp = scores[playerCount-2]; 
+				for (let i = playerCount-2; i > 0; i--) {
+                scores[i] = scores[i-1];
+				}
+                scores[0] = tmp;
+				
+                var tmp = nom[playerCount-2]; 
+				for (let i = playerCount-2; i > 0; i--) {
+                nom[i] = nom[i-1];
+				}
+                nom[0] = tmp;
+				
+				scores_back = clone(scores);
+				nom_back = clone(nom);			
+				tabScoresBack.push(scores_back);
+				tabNomsBack.push(nom_back);
+				gameResult.push([scores[playerCount-2][0],3]); //alert(serveTeam); alert(scores);
+				serviceFaultOrder();
+            }
+            load();
+			serviceOrder();
+			
+			document.getElementById("rollback").disabled = false;
+        }		
+		
+		function serviceCount(){ //alert(scores[2][0]);
+		let z=scores.length-2;
+		
+		if (scores.length == 4){
+			if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+			else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ;  }
+			else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+			else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+			}
+		else if (scores.length == 5){
+			if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+			else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+			else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+			else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+			else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+			}
+		else if (scores.length == 6){
+			if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+			else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+			else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+			else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+			else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+			else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+			}
+		else if (scores.length == 7){
+			if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+			else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+			else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+			else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+			else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+			else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+			else if (serveTeam[6][0] == scores[z][0]){g=g+1; serveTeam[6][1]= g ; }
+			}
+		else if (scores.length == 8){
+			if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+			else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+			else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+			else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+			else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+			else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+			else if (serveTeam[6][0] == scores[z][0]){g=g+1; serveTeam[6][1]= g ; }
+			else if (serveTeam[7][0] == scores[z][0]){k=k+1; serveTeam[7][1]= k ; }
+			}
+		}
+
+		function servicePlayerName(){
+
+			var playerNameTeam =[];
+			
+			for (let i = 1; i <= nom.length; i++) {
+		
+				var a = nom[i-1][1].split(' ');	
+				playerNameTeam.push([a[0],a[1]]);
+				
+				if (a != "") {
+					eval('player1NameTeam' + i +' = playerNameTeam['+(i-1)+'][0];');
+					eval('player2NameTeam' + i +' = playerNameTeam['+(i-1)+'][1];');
+					}
+				else {
+					eval('player1NameTeam' + i +' =\'P1\';');
+					eval('player2NameTeam' + i +' =\'P2\';');
+					}
+				} 
+			servicePlayer1Name = player1NameTeam3;
+			servicePlayer2Name = player2NameTeam3;			
+
+			     if (scores.length == 5){servicePlayer1Name=player1NameTeam4;servicePlayer2Name=player2NameTeam4;} 
+			else if (scores.length == 6){servicePlayer1Name=player1NameTeam5;servicePlayer2Name=player2NameTeam5;} 
+			else if (scores.length == 7){servicePlayer1Name=player1NameTeam6;servicePlayer2Name=player2NameTeam6;} 
+			else if (scores.length == 8){servicePlayer1Name=player1NameTeam7;servicePlayer2Name=player2NameTeam7;}
+		}
+
+		function serviceOrder(){ 
+		
+		let z=scores.length-1;
+			
+			var a=Number.isInteger(serveTeam[0][1]/2); 
+			var b=Number.isInteger(serveTeam[1][1]/2); 
+			var c=Number.isInteger(serveTeam[2][1]/2); 
+			var d=Number.isInteger(serveTeam[3][1]/2);  
+			if (scores.length == 5){
+				var e=Number.isInteger(serveTeam[4][1]/2);}  
+			else if (scores.length == 6){
+				var e=Number.isInteger(serveTeam[4][1]/2); 
+				var h=Number.isInteger(serveTeam[5][1]/2);}  
+			else if (scores.length == 7){
+				var e=Number.isInteger(serveTeam[4][1]/2);
+				var h=Number.isInteger(serveTeam[5][1]/2);
+				var g=Number.isInteger(serveTeam[6][1]/2);}  
+			else if (scores.length == 8){
+				var e=Number.isInteger(serveTeam[4][1]/2);
+				var h=Number.isInteger(serveTeam[5][1]/2);
+				var g=Number.isInteger(serveTeam[6][1]/2);
+				var k=Number.isInteger(serveTeam[7][1]/2);}
+		//alert(scores[2][0]); 
+		//alert(serveTeam[0][0]+":"+player1NameTeam1+"/"+player2NameTeam1+" "+serveTeam[1][0]+":"+player1NameTeam2+"/"+player2NameTeam2+" "+serveTeam[2][0]+":"+player1NameTeam3+"/"+player2NameTeam3+" "+serveTeam[3][0]+":"+player1NameTeam4+"/"+player2NameTeam4);
+		//alert(serveTeam[0][0]+":"+a+" "+serveTeam[1][0]+":"+b+" "+serveTeam[2][0]+":"+c+" "+serveTeam[3][0]+":"+d+" ");
+		if (serveTeam[0][0] == scores[z-1][0] ){
+				 if (a == true ) { 
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+					   
+			 else if (serveTeam[1][0] == scores[z-1][0] ){
+				 if (b == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+					}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+					   
+			 else if (serveTeam[2][0] == scores[z-1][0] ){
+				 if (c == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		
+			 else if (serveTeam[3][0] == scores[z-1][0] ){
+				 if (d == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		
+			 else if (serveTeam[4][0] == scores[z-1][0] ){
+				 if (e == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		
+			else if (serveTeam[5][0] == scores[z-1][0] ){
+				 if (h == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		    
+			else if (serveTeam[6][0] == scores[z-1][0] ){
+				 if (g == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		    
+			else if (serveTeam[7][0] == scores[z-1][0] ){
+				 if (k == true ) {
+					document.getElementById("n"+z).setAttribute ('class' , 'serve1');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';
+							}
+				 else {document.getElementById("n"+z).setAttribute ('class' , 'serve2');
+					document.getElementById("n"+z).style.border = '2px solid';
+					document.getElementById("n"+z).style.fontWeight = 'bold';
+					document.getElementById("n"+z).style.fontSize = '20pt';
+					document.getElementById("n"+z).style.fontFamily = 'Arial, Helvetica, sans-serif';
+					document.getElementById("n"+z).style.borderColor = 'black';}
+					}
+		}
+
+		function serviceFaultOrder(){ 
+			
+			let z=scores.length-1;
+			var className = document.getElementById("n"+z).className;
+			
+		if (serveTeam[0][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1' ) {
+				 serviceOut.push([scores[0][0],servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if (className == 'serve2'){
+				 serviceOut.push([scores[0][0],servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+				 
+		else if (serveTeam[1][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0],servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0],servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+					   
+		else if (serveTeam[2][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0],servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+		
+		else if (serveTeam[3][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0], servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+		
+		else if (serveTeam[4][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0], servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+		
+		else if (serveTeam[5][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0], servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+		
+		else if (serveTeam[6][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0], servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+		
+		else if (serveTeam[7][0] == scores[z-1][0] && serviceFaultTag == true){
+				 if (className == 'serve1'){
+				 serviceOut.push([scores[0][0], servicePlayer1Name]);
+				 serviceFaultTag = false;}
+				 else if(className == 'serve2'){
+				 serviceOut.push([scores[0][0], servicePlayer2Name]);
+				 serviceFaultTag = false;}}
+			//alert(serviceOut);
+//			testLastServiceIsFault = true;
+		}
+		
+		var rollbackCounter = 0;
+		var forwardCounter = 0;
+		
+		function rollbackServiceFault(){
+			let index = (gameResult.length - (rollbackCounter + 1));
+			if ( gameResult[index][1] == 3 ){ 
+				serviceOut.pop();
+				//alert('bbb');alert(serviceOut);
+				} 
+			rollbackCounter++;}
+		
+		var counter = 0;
+		function rollback() {
+		
+			let index = (tabScoresBack.length - (counter + 2));
+			
+			if (scores.length > tabScoresBack[index].length){
+				var tdC=document.getElementById('c1');
+				var tdN=document.getElementById('n1');
+				var tr1=document.getElementById('challengerScore');
+				var tr2=document.getElementById('challengerName');
+				
+				tr1.removeChild(tdC);
+				tr2.removeChild(tdN);
+										
+				for (let i = 2; i <=scores.length; i++){
+				document.getElementById('c'+i).id = 'c'+(i-1);
+				document.getElementById('n'+i).id = 'n'+(i-1);
+				}
+				counterPlayer--;
+		//		colorNewPlayerCounter--;
+			}
+			
+			if (scores.length < tabScoresBack[index].length){
+			
+				var newtdN,newtdC;
+				var tdC=document.getElementById('c1');
+				var tdN=document.getElementById('n1');
+				var tr1=document.getElementById('challengerScore');
+				var tr2=document.getElementById('challengerName');	
+				
+				for (let i = scores.length; i > 0; i--){
+					document.getElementById('c'+i).id = 'c'+(i+1); 
+					document.getElementById('n'+i).id = 'n'+(i+1);
+				}
+				
+				newtdN=document.createElement('td');
+				newtdN.setAttribute('class','case3');
+				newtdN.setAttribute('id','n1');
+				
+				newtdC=document.createElement('td');
+				newtdC.setAttribute('class','case1');
+				newtdC.setAttribute('id','c1');
+				eval('newtdC.setAttribute(\'onclick\',\'removeTeam('+counterRemovePlayer+')\');');
+							
+				tr1.insertBefore(newtdC, tdC);
+				tr2.insertBefore(newtdN, tdN);
+				counterPlayer++;
+			//	colorNewPlayerCounter++;
+				counterRemovePlayer++;
+				testNom();
+			}
+			
+			scores = clone(tabScoresBack[index]);
+			nom = clone(tabNomsBack[index]);
+			counter++;	
+			rb = true; 
+						
+			let z=scores.length-2;
+			
+			if (scores.length == 4){
+					 if (serveTeam[0][0] == scores[2][0]){a=a-1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[2][0]){b=b-1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[2][0]){c=c-1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[2][0]){d=d-1; serveTeam[3][1]= d ; }
+				}
+			else if (scores.length == 5){
+					 if (serveTeam[0][0] == scores[z][0]){a=a-1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b-1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c-1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d-1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e-1; serveTeam[4][1]= e ; }
+				}
+			else if (scores.length == 6){
+					 if (serveTeam[0][0] == scores[z][0]){a=a-1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b-1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c-1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d-1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e-1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h-1; serveTeam[5][1]= h ; }
+				}
+			else if (scores.length == 7){
+					 if (serveTeam[0][0] == scores[z][0]){a=a-1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b-1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c-1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d-1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e-1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h-1; serveTeam[5][1]= h ; }
+				else if (serveTeam[6][0] == scores[z][0]){g=g-1; serveTeam[6][1]= g ; }
+				}
+			else if (scores.length == 8){
+					 if (serveTeam[0][0] == scores[z][0]){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b-1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c-1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d-1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e-1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h-1; serveTeam[5][1]= h ; }
+				else if (serveTeam[6][0] == scores[z][0]){g=g-1; serveTeam[6][1]= g ; }
+				else if (serveTeam[7][0] == scores[z][0]){k=k-1; serveTeam[7][1]= k ; }
+				}
+				
+			serviceOrder();
+			matchResult.splice(matchResult.length-2, 2);
+			document.getElementById('forward').disabled = false;		
+            load(); 
+			rollbackServiceFault();
+
+        }
+		
+		function forward() {
+		
+			let z=scores.length-2;		
+					
+			if (scores.length == 4){
+				if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ;  }
+				else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+				}
+			else if (scores.length == 5){
+				if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+				}
+			else if (scores.length == 6){
+				if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+				}
+			else if (scores.length == 7){
+				if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+				else if (serveTeam[6][0] == scores[z][0]){g=g+1; serveTeam[6][1]= g ; }
+				}
+			else if (scores.length == 8){
+				if (serveTeam[0][0] == scores[z][0] ){a=a+1; serveTeam[0][1]= a ; }
+				else if (serveTeam[1][0] == scores[z][0]){b=b+1; serveTeam[1][1]= b ; }
+				else if (serveTeam[2][0] == scores[z][0]){c=c+1; serveTeam[2][1]= c ; }
+				else if (serveTeam[3][0] == scores[z][0]){d=d+1; serveTeam[3][1]= d ; }
+				else if (serveTeam[4][0] == scores[z][0]){e=e+1; serveTeam[4][1]= e ; }
+				else if (serveTeam[5][0] == scores[z][0]){h=h+1; serveTeam[5][1]= h ; }
+				else if (serveTeam[6][0] == scores[z][0]){g=g+1; serveTeam[6][1]= g ; }
+				else if (serveTeam[7][0] == scores[z][0]){k=k+1; serveTeam[7][1]= k ; }
+				}
+			
+				forwardServiceFault();
+				let index = (tabScoresBack.length - counter);
+				
+			if (scores.length < tabScoresBack[index].length){
+			
+				var newtdN,newtdC;
+				var tdC=document.getElementById('c1');
+				var tdN=document.getElementById('n1');
+				var tr1=document.getElementById('challengerScore');
+				var tr2=document.getElementById('challengerName');	
+				
+				for (let i = scores.length; i > 0; i--){
+					document.getElementById('c'+i).id = 'c'+(i+1); 
+					document.getElementById('n'+i).id = 'n'+(i+1);
+				}
+				
+				newtdN=document.createElement('td');
+				newtdN.setAttribute('class','case3');
+				newtdN.setAttribute('id','n1');
+				
+				newtdC=document.createElement('td');
+				newtdC.setAttribute('class','case1');
+				newtdC.setAttribute('id','c1');
+				eval('newtdC.setAttribute(\'onclick\',\'removeTeam('+counterRemovePlayer+')\');');
+							
+				tr1.insertBefore(newtdC, tdC);
+				tr2.insertBefore(newtdN, tdN);
+					
+				counterPlayer++;
+				colorNewPlayerCounter++;
+				counterRemovePlayer++;
+			}
+			
+			if (scores.length > tabScoresBack[index].length){
+				var tdC=document.getElementById('c1');
+				var tdN=document.getElementById('n1');
+				var tr1=document.getElementById('challengerScore');
+				var tr2=document.getElementById('challengerName');
+				
+				tr1.removeChild(tdC);
+				tr2.removeChild(tdN);
+										
+				for (let i = 2; i <=scores.length; i++){
+				document.getElementById('c'+i).id = 'c'+(i-1);
+				document.getElementById('n'+i).id = 'n'+(i-1);
+				}
+				counterPlayer--;
+				colorNewPlayerCounter--;
+			}
+			
+			matchResult.push([tabScoresBack[index][scores.length-1][0],"win"],[tabScoresBack[index][0][0],"lost"],);
+				scores = clone(tabScoresBack[index]);
+				nom = clone(tabNomsBack[index]);
+				counter--;				
+				testNom();
+				serviceOrder();
+				load();				
+			}
+		
+		function forwardServiceFault(){
+		
+			let index = (gameResult.length - rollbackCounter);
+			
+			let v = scores.length-2;
+			 
+			var className = document.getElementById('n'+(v+1)).className;
+			
+			if ( gameResult[index][1] == 3 ){ 
+				if (serveTeam[0][0] == scores[v][0] ){
+					if (className == 'serve1') {
+					serviceOut.push([scores[v][0],player1NameTeam3]);}
+					else if (className == 'serve2'){
+					serviceOut.push([scores[v][0],player2NameTeam3]);}			
+					}
+				
+				else if (serveTeam[1][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0],player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0],player2NameTeam3]);}
+					}
+				
+				else if (serveTeam[2][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0],player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[3][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[4][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[5][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[6][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[7][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+					
+				else if (serveTeam[8][0] == scores[v][0]){
+					if (className == 'serve1'){
+					serviceOut.push([scores[v][0], player1NameTeam3]);}
+					else if(className == 'serve2'){
+					serviceOut.push([scores[v][0], player2NameTeam3]);}
+					}
+				}
+				rollbackCounter--;
+			 //alert(serviceOut);
+		}
+		
+		function save(){
+		for (let i = 1; i <= nom.length; i++) {
+		nom[i-1][1] = document.getElementById("p"+i).value;
+		}
+		document.getElementById('countdownMin').innerHTML = element;
+		document.getElementById('countdownSec').innerHTML = "00";
+			
+		wheelSound();
+        //shuffle(scores, nom);
+        
+        var intervalx = setInterval(shuffle, 200);
+        setTimeout(() => { clearInterval(intervalx); }, 2500);
+        		  
+        var interval = setInterval(shuffle, 250);
+        setTimeout(() => { clearInterval(interval); }, 4500);
+
+		if ( element < 10 ){
+			document.getElementById('countdownMin').innerHTML = '0' + element;
+		}
+		
+		for(i=5; i<counterPlayer; i++){
+		document.getElementById('p'+i).hidden = true;
+		document.getElementById('n'+i).hidden = false;
+		document.getElementById('c'+i).hidden = false;
+		document.getElementById('color'+i).hidden = true;
+		document.getElementById('deleteColor'+i).hidden = true;}
+		
+//		document.getElementById('newPlayerColor').hidden = true;
+		document.getElementById('addPlayer').hidden = true;
+		
+		document.getElementById('save').hidden = true;
+		document.getElementById('p1').hidden = true;
+		document.getElementById('p2').hidden = true;
+		document.getElementById('p3').hidden = true;
+		document.getElementById('p4').hidden = true;
+		document.getElementById('z').hidden = true;
+		document.getElementById('button').disabled = false;
+		
+		document.getElementById('nextup').hidden = false;
+		document.getElementById('n1').hidden = false;
+		document.getElementById('n2').hidden = false;
+		document.getElementById('n3').hidden = false;
+		document.getElementById('n4').hidden = false;
+		document.getElementById('c1').hidden = false;
+		document.getElementById('c2').hidden = false;
+		document.getElementById('c3').hidden = false;
+		document.getElementById('c4').hidden = false;
+		
+		document.getElementById('challenger').hidden = false;
+		document.getElementById('kingside').hidden = false;
+		document.getElementById('countdown').hidden = false;
+		document.getElementById('nextChallenger').hidden = false;
+		document.getElementById('button').hidden = false;
+		document.getElementById('nextChallenger').disabled = true;
+		
+		document.getElementById('timeOption').hidden = true;
+		
+		document.getElementById('color1').hidden = true;
+		document.getElementById('color2').hidden = true;
+		document.getElementById('color3').hidden = true;
+		document.getElementById('color4').hidden = true;
+		
+		document.getElementById("n"+(scores.length-1)).setAttribute ('class' , 'serve1');
+		document.getElementById("n"+(scores.length-1)).style.border = '2px solid';
+		document.getElementById("n"+(scores.length-1)).style.fontWeight = 'bold';
+		document.getElementById("n"+(scores.length-1)).style.fontSize = '20pt';
+		document.getElementById("n"+(scores.length-1)).style.fontFamily = 'Arial, Helvetica, sans-serif';
+		document.getElementById("n"+(scores.length-1)).style.borderColor = 'black';
+			
+		testNom();
+			
+		load();
+		}
+			
+        function clone(a) {
+            let tmp=[];
+            for( let i=0;i<a.length;i++) {
+                tmp[i] = [...a[i]];
+            }
+            return tmp;
+		}
+		
+		
+	const hex2rgb = (hex) => {
+		const r = parseInt(hex.slice(1, 3), 16)
+		const g = parseInt(hex.slice(3, 5), 16)
+		const b = parseInt(hex.slice(5, 7), 16)
+		// return {r, g, b} // return an object
+		return [ r, g, b ]
+	}
+
+        function load() {
+            for (let i = 1; i <= scores.length; i++) {
+                document.getElementById("c"+i).setAttribute('bgcolor', scores[i-1][0]);
+                document.getElementById("c"+i).innerHTML = scores[i-1][1];
+				document.getElementById("c"+i).style.color = getOpositeColor(hex2rgb(scores[i-1][0]));
+                document.getElementById("n"+i).setAttribute('bgcolor', nom[i-1][0]);
+                document.getElementById("n"+i).innerHTML = nom[i-1][1];	
+				document.getElementById("n"+i).style.color = getOpositeColor(hex2rgb(nom[i-1][0]));
+            }	
+        }
+		
+		function tri(){	
+			scores_back = clone(scores);
+			nom_back = clone(nom);
+			
+			for (let i=0; i < scores.length; i++){
+				removedTeam.unshift([scores_back[i][0],nom_back[i][1],scores_back[i][1]]);
+				allTeamsColor.unshift(scores_back[i][0]);
+				allTeamsName.unshift([scores_back[i][0],nom_back[i][1]]);
+			}
+		
+			allTeamsColor = [...new Set(allTeamsColor)];
+			
+			var pointByColorTri=[]; var bbb;
+			let p=0;
+			
+			for (let i = 0; i < removedTeam.length; i++) {	
+			tab.push([
+			removedTeam[i][0],
+			removedTeam[i][2],
+			searchColorInArray(matchResult,removedTeam[i][0],"win"),
+			searchColorInArray(matchResult,removedTeam[i][0],"lost"),
+			removedTeam[i][1],
+			0,
+			]);
+			} 
+			//tab.sort((a,b) => b[1] - a[1] );
+		
+		while (p < removedTeam.length){		
+			for (let i=0; i < tabScoresBack.length; i++){
+				let a = tabScoresBack[i];
+				bbb = a.find((color) => color[0] === tab[p][0]);
+				pointByColorTri.push([0,0,0,0,0,0,0,0]); 	
+				if (typeof bbb != "undefined") {pointByColorTri[p][i]=bbb[1];} 
+				} 
+				p++;
+			}
+			
+			for (let i = 0; i < removedTeam.length; i++) {
+			tab[i][5]=pointByColorTri[i].indexOf(removedTeam[i][2]); 
+			}	
+			
+			tab = tab.sort((a, b) =>  b[1] - a[1] || b[2] - a[2] || a[3] - b[3] || a[5] - b[5]);	
+			
+			winnerTab.push([tab[0][0],"winner"]);
+			
+			createTable();			
+			searchByColor();
+		}
+		
+		function createTable(){
+ 			 
+			var table=document.createElement('table');
+			table.setAttribute('align','center');
+			table.setAttribute('id','triTable');
+ 
+			var tbody=document.createElement('tbody');
+ 
+			var tr,td,td1,td2,td3,td4;
+ 
+			for(i=1;i<= removedTeam.length;i++){
+				tr=document.createElement('tr');
+
+				td1=document.createElement('td');
+				td1.setAttribute('class','case6');
+				td1.setAttribute('id','tr'+i);
+				
+				td=document.createElement('td');
+				td.setAttribute('class','case5');
+				td.setAttribute('id','tri'+i);
+				
+				td2=document.createElement('td');
+				td2.setAttribute('class','case6');
+				td2.setAttribute('id','trix'+i);
+				
+				td3=document.createElement('td');
+				td3.setAttribute('class','case6');
+				td3.setAttribute('id','matchEarned'+i);
+				
+				td4=document.createElement('td');
+				td4.setAttribute('class','case6');
+				td4.setAttribute('id','matchLost'+i);
+				
+				
+				tr.appendChild(td1);
+				tr.appendChild(td);
+				tr.appendChild(td2);
+				tr.appendChild(td3);
+				tr.appendChild(td4);
+				tbody.appendChild(tr);				
+			}
+			table.appendChild(tbody);
+ 
+			var elt=document.getElementById('tableau');
+			while(elt.hasChildNodes())elt.removeChild(elt.lastChild);
+			elt.appendChild(table);
+			
+			for(i=1;i<=removedTeam.length;i++){
+				document.getElementById("tr"+i).innerHTML = "N° " + i;
+				document.getElementById("tr"+i).setAttribute('bgcolor','darkgray');
+				document.getElementById("tri"+i).innerHTML = tab[i-1][4];
+				document.getElementById("trix"+i).innerHTML = tab[i-1][1];
+				document.getElementById("matchEarned"+i).innerHTML = searchColorInArray(matchResult,tab[i-1][0],"win");
+				document.getElementById("matchLost"+i).innerHTML = searchColorInArray(matchResult,tab[i-1][0],"lost");
+				document.getElementById("tri"+i).setAttribute('bgcolor', tab[i-1][0]);
+				document.getElementById("tri"+i).style.color = getOpositeColor(hex2rgb(tab[i-1][0]));
+				document.getElementById("tri"+i).style.borderColor = 'black';
+				document.getElementById("trix"+i).setAttribute('bgcolor', tab[i-1][0]);
+				document.getElementById("trix"+i).style.color = getOpositeColor(hex2rgb(tab[i-1][0]));
+				document.getElementById("trix"+i).style.borderColor = 'black';
+				document.getElementById("matchEarned"+i).setAttribute('bgcolor', 'darkgray');
+				document.getElementById("matchLost"+i).setAttribute('bgcolor', 'darkgray');
+				//document.getElementById("matchEarned"+i).setAttribute('bgcolor', tab[i-1][0]);
+				//document.getElementById("matchLost"+i).setAttribute('bgcolor', tab[i-1][0]);
+			}
+			
+			document.getElementById('tabHeader').hidden = false;
+			document.getElementById('winner').hidden = false;
+			document.getElementById('winnerLabel').hidden = false;
+			document.getElementById("winner").innerHTML = tab[0][4];
+			document.getElementById("winner").setAttribute('bgcolor', tab[0][0]);	
+			document.getElementById("winner").style.color = getOpositeColor(hex2rgb(tab[0][0]));
+			document.getElementById("winner").style.borderColor = 'black';		
+			 
+		}
+    </script>
+</head>
+<body onload="load()">
+
+    <div class="content">
+	   	<label style="font-size: 30pt; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: gold" >King Of The Court</label></br>
+        </br>
+		<table align="center">	
+	        <tr>
+                <td colspan="3" class="title" id="z" hidden>Please enter the names of the players :</td>
+            </tr>
+ 		</table>
+        </br>
+	
+	<form action="" method="post" >
+       <div id="timeOption">
+	   
+            <label for="timer" style="font-size: 15pt; font-family: Arial, Helvetica, sans-serif; font-weight: bold;" >Select the time to play (minutes): </label>
+			
+			<select id="timerValue" name="timer" >
+				<option value="1">1</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option selected Value="30">30</option>
+				<option value="40">40</option>
+				<option value="60">60</option>
+				</select></br></br>				
+				
+				<label for="gameMode"style="font-size: 13pt; font-family: Arial, Helvetica, sans-serif; font-weight: bold;" >Elimination mode : </label>
+				<input type="checkbox" id="gameMode" name="gameMode" value="gameMode">
+				</br></br>
+			<table align="center">
+				<tr>
+					<input type="button" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:205px; height:40px; font-size: 12pt;" value="Submit"  id="timeOK" onclick="submitTime()"/>
+				</tr>
+			</table>
+            <table align="center">
+              <tr>
+                  <td><img src="logo (1).png" width="200" height="300"></td>
+                  <td style="color: grey">.........</td>
+              </tr>
+            </table>
+		</div>
+    </form>
+	
+		<table align="center" id="colorTab">
+			<tr>
+				<td><input style= "height:30px;" type="color" id="color1" value="#ee8a07" onchange="changeColor(1)" hidden></td>
+				<td><input type="text" style="background-color:#ee8a07; font-weight:bold; width:205px; height:30px; font-size: 12pt;" placeholder="Team 1" id="p1" maxlength="12" hidden></input></td>							
+			</tr>
+			<tr>
+				<td><input style= "height:30px;" type="color" id="color2" value="#00cc99" onchange="changeColor(2)" hidden></td>
+				<td><input type="text" style="background-color:#00cc99; font-weight:bold; width:205px; height:30px; font-size: 12pt;" placeholder="Team 2" id="p2" maxlength="12" hidden></input></td>
+			</tr>
+			<tr>
+				<td><input style= "height:30px;" type="color" id="color3" value="#76bae7" onchange="changeColor(3)" hidden></td>
+				<td><input type="text" style="background-color:#76bae7; font-weight:bold; width:205px; height:30px; font-size: 12pt;"  placeholder="Team 3" id="p3" maxlength="12" hidden></input></td>
+			</tr>
+			<tr>
+				<td><input style= "height:30px;" type="color" id="color4" value="#1045fb" onchange="changeColor(4)" hidden></td>
+				<td><input type="text" style="background-color:#1045fb; font-weight:bold; width:205px; height:30px; font-size: 12pt;" placeholder="Team 4" id="p4" maxlength="12" hidden></input></td>
+			</tr>
+		</table>
+		
+		<table align="center" >
+			<tr>
+				<td>
+				<button class="addPlayer" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:205px; height:40px; font-size: 12pt;" onclick="addPlayer()" id='addPlayer'  hidden >ADD TEAM</button>
+				</td>
+			</tr>
+		    <tr>
+				<td>
+				<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:205px; height:40px; font-size: 12pt;" onclick="save()" id='save' hidden >SUBMIT</button>
+				</td>
+			</tr>
+		</table>
+		
+		<table align="center" id="nextup" hidden>
+			<tr>
+                <td colspan="2" class="title" >>>> NEXT UP >>></td>
+            </tr>
+			<p class="title" style="color:red" id="removingMessage" hidden>Click on the team you want to remove.</p>
+		</table>
+        <table align="center" id="cases1">
+			<tr id="challengerName">
+				<td class="case3" id="n1" hidden ></td>
+                <td class="case3" id="n2" hidden ></td>
+            </tr>
+            <tr id="challengerScore">
+                <td class="case1" onclick="removeTeam(2)" id="c1" hidden ></td>
+                <td class="case1" onclick="removeTeam(1)" id="c2" hidden ></td>
+			</tr>
+        </table>
+        </br>
+        <table align="center" id="cases2">
+            <tr>
+                <td class="title" id="challenger" hidden >CHALLENGER</td>
+                <td class="crown title" id="kingside" hidden >KING SIDE</td>
+            </tr>
+            <tr>
+                <td class="case4" id="n3" hidden ></td>
+                <td class="case4" id="n4" hidden ></td>
+            </tr>
+            <tr>
+			    <td class="case2 case2-wrapped" onclick="f(2)" id="c3" hidden ></td>
+                <td class="case2" onclick="f(1)" id="c4" hidden ></td>
+            </tr>
+		</table>
+        <table align="center" id="buttons">
+			<tr>
+	            <td>
+	            	<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="f(3)" id='nextChallenger' hidden >SERVICE FAULT</button>
+	            	<button class="TeamGear" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="teamManager()" id='teamManager' hidden >TEAM MANAGER</button>
+	            	<button class="TeamGear" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="teamManager2()" id='teamManager2' hidden >TEAM MANAGER</button>
+	            	<button class="deletePlayer" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="cancelTeamRemoving()" id='cancelTeamRemoving' hidden >CANCEL</button>
+				</td>
+		        <td>
+		        	<button class="start" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="start()" id='button' hidden >START COUNTDOWN</button>
+	            	<button class="pause" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="pause()" id='button2' hidden="true">PAUSE COUNTDOWN</button>
+	            </td>
+		   </tr>
+		   <tr>
+	            <td>
+		        	<button class="back" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="rollback()" id='rollback' hidden />BACK
+		        	<button class="deletePlayer" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="enableTeamRemove()" id='removeTeam' hidden />REMOVE TEAM
+		        </td>
+	            <td>
+		        	<button class="forward" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="forward()" id='forward' hidden />NEXT
+		        	<button class="addPlayer" style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="addNewPlayer()" id='addNewPlayer' hidden />ADD TEAM
+		        </td>
+		   </tr>
+		</table>
+		
+		<table align="center">
+			<tr id="countdown" hidden>
+				<td class="case7" id="countdownMin" ></td>
+				<td class="case8" id="countdown2" style="width:2px">:</td>
+				<td class="case9" id="countdownSec" ></td>
+			</tr>
+        </table>
+                           
+       <table align="center" id="winTableLabel">
+           <tr>
+               <td colspan="3" class="title" id="winnerLabel" hidden >======== THE WINNER(S) : ========</td>
+           </tr>
+       </table> 
+
+       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"/>
+       <table align="center" id="winTable">
+            <tr>
+               <td class="trophy win-wrapped" id='winner' style="font-weight:bold; width:300px; height:30px; font-size: 15pt; border: 3px solid;" hidden ></td>
+            </tr>
+       </table>
+		</br>
+		<table align="center" id="tabHeader" hidden>
+			<tbody>
+			    <tr>
+			    	<td colspan="5" class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:12pt;">TEAM'S  RANKING</td>
+			    </tr>
+				<tr>
+					<td rowspan="2" class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">RANK</td>
+					<td rowspan="2" class="case5" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">TEAM</td>
+					<td rowspan="2" class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">SCORE</td>
+					<td colspan="2" class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">MATCH</td>
+				</tr>
+				<tr>
+					<td class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">WIN</td>
+					<td class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:10pt;">LOST</td>
+				</tr>
+			<tbody>
+		</table>
+
+	<form action="" method="post" >
+		<div id="tableau">
+		</div>
+	</form></br>
+	
+		<table align="center" id="serviceTab" hidden>
+			<tbody>
+			    <tr>
+			    	<td colspan="3" class="case6" bgcolor="darkgray" style="font-weight:bold; font-size:12pt;">SERVICE STATISTIC</td>
+			    </tr>
+				<tr>
+					<td class="case11" id="statserviceTeam1" border="1px" bgcolor="darkgray" style="font-weight:bold; font-size:10pt; height:15px; height: 20px; text-align:center">PLAYER</td>
+					<td class="case11" id="statserviceTeam2" border="1px" bgcolor="darkgray" style="font-weight:bold; font-size:10pt; height:15px; height: 20px; text-align:center">TOTAL</td>
+					<td class="case11" id="statserviceTeam3" border="1px" bgcolor="darkgray" style="font-weight:bold; font-size:10pt; height:15px; height: 20px; width: 200px; text-align:center">SERVICE FAULT</td>
+				</tr>
+			<tbody>
+		</table>
+		
+	<form action="" method="post" >
+		<div id="serviceStatTable">
+		</div>
+	</form></br>
+		
+		<table align="center" id="statTableau" hidden>
+			<tbody>
+			    <tr>
+			    	<td colspan="8" class="case6" id="pointsScored" bgcolor="darkgray" style="font-weight:bold; font-size:12pt;">POINTS SCORED</td>
+			    </tr>
+				<tr>
+					<td class="case11" id="statTeam1" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px"></td>
+					<td class="case11" id="statTeam2" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px"></td>
+					<td class="case11" id="statTeam3" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px"></td>
+					<td class="case11" id="statTeam4" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px"></td>
+					<td class="case11" id="statTeam5" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px" hidden></td>
+					<td class="case11" id="statTeam6" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px" hidden></td>
+					<td class="case11" id="statTeam7" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px" hidden></td>
+					<td class="case11" id="statTeam8" border="2px" style="font-weight:bold; font-size:10pt; width:49px; height:15px" hidden></td>
+				</tr>
+			<tbody>
+		</table>
+		
+	<form action="" method="post" >
+		<div id="statTable">
+		</div>
+	</form></br>
+	
+		<table align="center" id="finalStatTable1" hidden>
+			<tbody>
+			    <tr>
+			    	<td colspan="10" class="case6" id="gamesHeader" bgcolor="darkgray" style="font-weight:bold; font-size:12pt;">STATS ALL GAMES</td>
+			    </tr>
+				<tr>
+					<td class="case11" id="gamesTeam" bgcolor="darkgray" style="text-align:center; font-size:9pt; width:80px;" >TEAM</td>
+					<td class="case11" id="gamesTeam1" bgcolor="darkgray" style="text-align:center; font-size:9pt;" >GAME 1</td>
+					<td class="case11" id="gamesTeam2" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>GAME 2</td>
+					<td class="case11" id="gamesTeam3" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>GAME 3</td>
+					<td class="case11" id="gamesTeam4" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>GAME 4</td>
+					<td class="case11" id="gamesTeam5" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>GAME 5</td>
+					<td class="case11" id="gamesTeam6" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>GAME 6</td>
+					<td class="case11" id="gamesWin" bgcolor="darkgray" style="text-align:center; font-size:9pt;" hidden>SET</td>
+				</tr>
+			<tbody>
+		</table>
+		
+	<form action="" method="post" >
+		<div id="gamesTableau">
+		</div>
+	</form>	
+			
+		<table align="center">
+			<tr>
+				<td>
+	            	<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="newGame()" id='newGame' hidden >NEW GAME</button>
+			    </td>
+			</tr>
+			<tr>
+				<td>
+	            	<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:35px; font-size: 10pt;" onclick="endGame()" id='endGame' hidden >END GAME</button>
+			    </td>
+			</tr>
+		</table>
+	
+			<table align="center" id="newTeam" hidden>
+			<tr>
+				<td><input style= "height:30px;" type="color" id="colorNewPlayer" onchange="changeNewPlayerColor()" ></td>
+				<td><input type="text" style="font-weight:bold; width:205px; height:30px; font-size: 12pt;" placeholder="new Team" id="pNewPlayer" maxlength="12" ></input></td>							
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td colspan="2">
+					<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:205px; height:40px; font-size: 10pt;" onclick="saveNewPlayer()" id='button3' >OK</button>
+			    </td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:205px; height:40px; font-size: 10pt;" onclick="cancelNewPlayer()" id='button3' >CANCEL</button>
+			    </td>
+			</tr>
+			</table>
+			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+	
+    </form>
+	</br>
+	</div>
+</body>
+<script>
+			
+			var element;
+			var startingMinutes;
+			var tt;
+			let time = 0;
+			
+			function submitTime(){ 
+			element = document.getElementById('timerValue').value;
+			tt = element;
+			startingMinutes = element;
+			time = startingMinutes * 60;
+			
+				document.getElementById('p1').hidden = false;
+				document.getElementById('p2').hidden = false;
+				document.getElementById('p3').hidden = false;
+				document.getElementById('p4').hidden = false;
+				document.getElementById('z').hidden = false;
+				document.getElementById('save').hidden = false;
+				document.getElementById('timeOption').hidden = true;
+				document.getElementById('color1').hidden = false;
+				document.getElementById('color2').hidden = false;
+				document.getElementById('color3').hidden = false;
+				document.getElementById('color4').hidden = false;
+				document.getElementById('addPlayer').hidden = false;
+				if (document.getElementById('gameMode').checked) {gameModeCheck=true;} else {gameModeCheck=false;}
+			}
+			
+    			
+			const countdownElMin = document.getElementById('countdownMin');
+			const countdownElSec = document.getElementById('countdownSec');
+			var idInterval;
+			
+			function start(){
+				idInterval=setInterval(updateCountdown, 1000);
+				game_over = false;
+				document.getElementById('button2').hidden = false;
+				document.getElementById('button').hidden = true;
+				document.getElementById('nextChallenger').disabled = false;
+				document.getElementById('rollback').hidden = true;
+				document.getElementById('forward').hidden = true;
+				document.getElementById("addNewPlayer").hidden=true;
+				document.getElementById("removeTeam").hidden=true;
+				document.getElementById("nextChallenger").hidden=false;		
+				document.getElementById("teamManager").hidden=true;		
+				document.getElementById("teamManager2").hidden=true;
+				document.getElementById('cancelTeamRemoving').hidden = true;
+				
+				if (rb == true){ 
+				   tabScoresBack.splice((tabScoresBack.length - counter), tabScoresBack.length );
+				   tabNomsBack.splice((tabNomsBack.length - counter), tabNomsBack.length );
+				   counter =0;				   
+				}
+				enableTeamRemove1 = false;
+				
+				document.getElementById("removingMessage").hidden=true;
+				document.getElementById("nextup").hidden=false;
+				document.getElementById("addNewPlayer").disabled=false;
+				document.getElementById("cases2").style.opacity = "1";
+				
+				testNom();
+			for(i=1;i<=scores.length-2;i++){
+			document.getElementById("c"+i).setAttribute('class','case1');
+			document.getElementById("n"+i).setAttribute('class','case3');
+			}
+			}
+			
+			function pause(){
+				clearInterval(idInterval);
+				game_over = true;
+				//document.getElementById('nextChallenger').disabled = true;
+				document.getElementById('button').hidden = false;
+				document.getElementById('button2').hidden = true;
+				document.getElementById('rollback').hidden = false;
+				document.getElementById('forward').hidden = false;
+				document.getElementById('forward').disabled = true;
+				//document.getElementById("addNewPlayer").hidden=true;
+				//document.getElementById("removeTeam").hidden=false;			
+				//document.getElementById("removeTeam").disabled=false;
+				document.getElementById("nextChallenger").hidden=true;		
+				document.getElementById("teamManager").hidden=false;			
+				document.getElementById("teamManager").disabled=false;
+			}
+			
+			function teamManager(){
+				document.getElementById('addNewPlayer').hidden = false;
+				document.getElementById('removeTeam').hidden = false;
+				document.getElementById('rollback').hidden = true;
+				document.getElementById('forward').hidden = true;
+				document.getElementById('teamManager').hidden = true;
+				document.getElementById('teamManager2').hidden = false;					
+			}
+			
+			function teamManager2(){
+				document.getElementById('teamManager').hidden = false;
+				document.getElementById('teamManager2').hidden = true;	
+				document.getElementById('addNewPlayer').hidden = true;
+				document.getElementById('removeTeam').hidden = true;
+				document.getElementById('rollback').hidden = false;
+				document.getElementById('forward').hidden = false;				
+			}
+			
+			function cancelTeamRemoving(){
+				
+				enableTeamRemove1 = false;
+				
+				document.getElementById("removingMessage").hidden=true;
+				document.getElementById("nextup").hidden=false;
+				document.getElementById("addNewPlayer").disabled=false;
+				document.getElementById("cases2").style.opacity = "1";
+				document.getElementById("teamManager").hidden=false;
+				document.getElementById('rollback').hidden = false;
+				document.getElementById('forward').hidden = false;
+				document.getElementById('cancelTeamRemoving').hidden = true;
+				document.getElementById('button').disabled = false;
+			
+			for(i=1;i<=scores.length-2;i++){
+			document.getElementById("c"+i).setAttribute('class','case1');
+			document.getElementById("n"+i).setAttribute('class','case3');
+			}			
+			}
+
+			var pointByColor1 = [['#ee8a07',0]];
+			var pointByColor2 = [['#00cc99',0]];
+			var pointByColor3 = [['#76bae7',0]];
+			var pointByColor4 = [['#1045fb',0]];
+			var pointByColor5 = [['#ee8a07',0]];
+			var pointByColor6 = [['#00cc99',0]];
+			var pointByColor7 = [['#76bae7',0]];
+			var pointByColor8 = [['#1045fb',0]];
+			var statPoint1 = [];
+			var statPoint2 = [];
+			var statPoint3 = [];
+			var statPoint4 = [];
+			var statPoint5 = [];
+			var statPoint6 = [];
+			var statPoint7 = [];
+			var statPoint8 = [];
+
+			var stat1 = [];
+			var stat2 = [];
+			var stat3 = [];
+			var stat4 = [];
+			var stat5 = [];
+			var stat6 = [];
+			var stat7 = [];
+			var stat8 = [];
+			var statGlobal = [[0,0,0,0,0]];
+
+			function searchByColor() {
+				var bb1 = []; var bb2 = []; var bb3 = []; var bb4 = [];
+				var bb5 = []; var bb6 = []; var bb7 = []; var bb8 = [];
+				
+                 statGlobal.splice(1, statGlobal.length);
+				 
+//			for (let i=0; i < scores.length; i++){
+//				removedTeam.unshift([scores[i][0],nom[i][1]]);
+//			}
+
+			for (let i=0; i < tabScoresBack.length; i++){
+				let a = tabScoresBack[i];
+				
+			if (tabScoresBack[i].length >= 4){ 
+				bb1 = a.find((color) => color[0] === removedTeam[0][0]); 
+				if (typeof bb1 != "undefined") {pointByColor1.push(bb1);
+				stat1[i] = pointByColor1[i+1][1] - pointByColor1[i][1] ; 
+				statPoint1[i] = pointByColor1[i+1][1];}else {pointByColor1.push([0,0]); stat1[i]=0;statPoint1[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 4){
+				bb2 = a.find((color) => color[0] === removedTeam[1][0]); 
+				if (typeof bb2 != "undefined") {pointByColor2.push(bb2);
+				stat2[i] = pointByColor2[i+1][1] - pointByColor2[i][1];
+				statPoint2[i] = pointByColor2[i+1][1];}else {pointByColor2.push([0,0]);stat2[i]=0;statPoint2[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 4){
+				bb3 = a.find((color) => color[0] === removedTeam[2][0]);
+				if (typeof bb3 != "undefined") {pointByColor3.push(bb3);                                       
+				stat3[i] = pointByColor3[i+1][1] - pointByColor3[i][1];
+				statPoint3[i] = pointByColor3[i+1][1];} else {pointByColor3.push([0,0]);stat3[i]=0;statPoint3[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 4){
+				bb4 = a.find((color) => color[0] === removedTeam[3][0]);
+				if (typeof bb4 != "undefined") {pointByColor4.push(bb4);
+				stat4[i]= pointByColor4[i+1][1] - pointByColor4[i][1];
+				statPoint4[i] = pointByColor4[i+1][1];}else {pointByColor4.push([0,0]);stat4[i]=0;statPoint4[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 5){
+				bb5 = a.find((color) => color[0] === removedTeam[4][0]);
+				if (typeof bb5 != "undefined") {
+				var c5 = pointByColor5.length - 1;
+				pointByColor5.push(bb5);
+				stat5[i]= pointByColor5[c5+1][1] - pointByColor5[c5][1];
+				statPoint5[i] = pointByColor5[c5+1][1];} else {pointByColor5.push([0,0]);stat5[i]=0;statPoint5[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 6){
+				bb6 = a.find((color) => color[0] === removedTeam[5][0]);
+				if (typeof bb6 != "undefined") {
+				var c6 = pointByColor6.length - 1;
+				pointByColor6.push(bb6);//alert(i+" "+pointByColor6);alert(pointByColor6[i][1]);alert(pointByColor6[i+1][1]);
+				stat6[i]= pointByColor6[c6+1][1] - pointByColor6[c6][1];  
+				statPoint6[i] = pointByColor6[c6+1][1];}else {pointByColor6.push([0,0]);stat6[i]=0;statPoint6[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 7){
+				bb7 = a.find((color) => color[0] === removedTeam[6][0]);
+				if (typeof bb7 != "undefined") {
+				var c7 = pointByColor7.length - 1;
+				pointByColor7.push(bb7);
+				stat7[i]= pointByColor7[c7+1][1] - pointByColor7[c7][1];
+				statPoint7[i] = pointByColor7[c7+1][1];}else {pointByColor7.push([0,0]);stat7[i]=0;statPoint7[i] =0;}}
+				
+			if (tabScoresBack[i].length >= 8){
+				bb8 = a.find((color) => color[0] === removedTeam[7][0]);
+				if (typeof bb8 != "undefined") {
+				var c8 = pointByColor8.length - 1;
+				pointByColor8.push(bb8);
+				stat8[i]= pointByColor8[c8+1][1] - pointByColor8[c8][1];
+				statPoint8[i] = pointByColor8[c8+1][1];}else {pointByColor8.push([0,0]);stat8[i]=0;statPoint8[i] =0;}}
+				  } 
+				  
+				for (let i=0; i <= tabScoresBack.length; i++){	//alert(stat1[i]+" "+stat2[i]+" "+stat3[i]+" "+stat4[i]+" "+stat5[i]+" "+stat6[i]);
+					 if (stat1[i] == 1){statGlobal.push([stat1[i],0,0,0,0,0,0,0,statPoint1[i]]);}				
+				else if (stat2[i] == 1){statGlobal.push([0,stat2[i],0,0,0,0,0,0,statPoint2[i]]);}
+				else if (stat3[i] == 1){statGlobal.push([0,0,stat3[i],0,0,0,0,0,statPoint3[i]]);}
+				else if (stat4[i] == 1){statGlobal.push([0,0,0,stat4[i],0,0,0,0,statPoint4[i]]);} 				
+				else if (stat5[i] == 1){statGlobal.push([0,0,0,0,stat5[i],0,0,0,statPoint5[i]]);}				
+				else if (stat6[i] == 1){statGlobal.push([0,0,0,0,0,stat6[i],0,0,statPoint6[i]]);}
+				else if (stat7[i] == 1){statGlobal.push([0,0,0,0,0,0,stat7[i],0,statPoint7[i]]);}
+				else if (stat8[i] == 1){statGlobal.push([0,0,0,0,0,0,0,stat8[i],statPoint8[i]]);}	
+				} 	
+				
+				createStatTable();
+		
+				document.getElementById("statTeam1").setAttribute('bgcolor',removedTeam[0][0]);
+				document.getElementById("statTeam1").style.color = getOpositeColor(hex2rgb(removedTeam[0][0]));
+				document.getElementById("statTeam1").style.borderColor = 'black';
+				document.getElementById("statTeam2").setAttribute('bgcolor',removedTeam[1][0]);
+				document.getElementById("statTeam2").style.color = getOpositeColor(hex2rgb(removedTeam[1][0]));
+				document.getElementById("statTeam2").style.borderColor = 'black';
+				document.getElementById("statTeam3").setAttribute('bgcolor',removedTeam[2][0]);
+				document.getElementById("statTeam3").style.color = getOpositeColor(hex2rgb(removedTeam[2][0]));
+				document.getElementById("statTeam3").style.borderColor = 'black';
+				document.getElementById("statTeam4").setAttribute('bgcolor',removedTeam[3][0]);
+				document.getElementById("statTeam4").style.color = getOpositeColor(hex2rgb(removedTeam[3][0]));
+				document.getElementById("statTeam4").style.borderColor = 'black';
+				if (removedTeam.length >= 5){
+					document.getElementById("statTeam5").setAttribute('bgcolor',removedTeam[4][0]);
+					document.getElementById("statTeam5").style.color = getOpositeColor(hex2rgb(removedTeam[4][0]));
+					document.getElementById("statTeam5").style.borderColor = 'black';
+					document.getElementById("statTeam5").hidden=false;
+					document.getElementById("pointsScored").setAttribute('colspan','5');}
+				if (removedTeam.length >= 6){
+					document.getElementById("statTeam6").setAttribute('bgcolor',removedTeam[5][0]);
+					document.getElementById("statTeam6").style.color = getOpositeColor(hex2rgb(removedTeam[5][0]));
+					document.getElementById("statTeam6").style.borderColor = 'black';
+					document.getElementById("statTeam6").hidden=false;
+					document.getElementById("pointsScored").setAttribute('colspan','6');}
+				if (removedTeam.length >= 7){
+					document.getElementById("statTeam7").setAttribute('bgcolor',removedTeam[6][0]);
+					document.getElementById("statTeam7").style.color = getOpositeColor(hex2rgb(removedTeam[6][0]));
+					document.getElementById("statTeam7").style.borderColor = 'black';
+					document.getElementById("statTeam7").hidden=false;
+					document.getElementById("pointsScored").setAttribute('colspan','7');}
+				if (removedTeam.length >= 8){
+					document.getElementById("statTeam8").setAttribute('bgcolor',removedTeam[7][0]);
+					document.getElementById("statTeam8").style.color = getOpositeColor(hex2rgb(removedTeam[7][0]));
+					document.getElementById("statTeam8").style.borderColor = 'black';
+					document.getElementById("statTeam8").hidden=false;
+					document.getElementById("pointsScored").setAttribute('colspan','8');}
+				
+				document.getElementById('statTableau').hidden = false;
+				document.getElementById('statTable').hidden = false;
+				document.getElementById('serviceTab').hidden = false;
+				document.getElementById('serviceStatTable').hidden = false;
+				
+				countServiceFault();
+			}
+			
+						
+		function createStatTable(){
+ 			 
+			var table1=document.createElement('table');
+			table1.setAttribute('align','center');
+			table1.setAttribute('id','pointsTable');
+ 
+			var tbody=document.createElement('tbody');
+ 
+			var tr,td1,td2,td3,td4,td5,td6,td7,td8;
+			
+			for(i=1;i<= statGlobal.length;i++){
+
+			tr=document.createElement('tr');
+
+			for(p=1;p<= removedTeam.length;p++){
+				eval('td' + p + '=document.createElement(\'td\');'); 
+				eval('td' + p + '.setAttribute(\'class\',\'case10\');');
+				eval('td' + p + '.setAttribute(\'id\',\'team' + p + 'Color' + i + '\');');
+			eval('tr.appendChild(td' + p + ');');
+			}
+			
+			tbody.appendChild(tr);	
+					
+			}
+			table1.appendChild(tbody);
+ 
+			var elt=document.getElementById('statTable');
+			while(elt.hasChildNodes())elt.removeChild(elt.lastChild);
+			elt.appendChild(table1);
+			
+			let a=statGlobal.length-1;
+			for (let i=0; i <= a; i++){ 
+			
+				if (statGlobal[i][0] == 1){
+					document.getElementById("team1Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team1Color"+i).setAttribute('bgcolor',removedTeam[0][0]);
+					document.getElementById("team1Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[0][0]));
+					document.getElementById("team1Color"+i).style.border = '2px solid';
+					document.getElementById("team1Color"+i).style.borderColor = 'black';
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					if (removedTeam.length >= 5){document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 6){document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][1] == 1){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team2Color"+i).setAttribute('bgcolor',removedTeam[1][0]);
+					document.getElementById("team2Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[1][0]));
+					document.getElementById("team2Color"+i).style.border = '2px solid';
+					document.getElementById("team2Color"+i).style.borderColor = 'black';
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					if (removedTeam.length >= 5){document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 6){document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][2] == 1){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team3Color"+i).setAttribute('bgcolor',removedTeam[2][0]);
+					document.getElementById("team3Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[2][0]));
+					document.getElementById("team3Color"+i).style.border = '2px solid';
+					document.getElementById("team3Color"+i).style.borderColor = 'black';
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					if (removedTeam.length >= 5){document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 6){document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][3] == 1){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team4Color"+i).setAttribute('bgcolor',removedTeam[3][0]);
+					document.getElementById("team4Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[3][0]));
+					document.getElementById("team4Color"+i).style.border = '2px solid';
+					document.getElementById("team4Color"+i).style.borderColor = 'black';
+					if (removedTeam.length >= 5){document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 6){document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][4] == 1 && removedTeam.length >= 5){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team5Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team5Color"+i).setAttribute('bgcolor',removedTeam[4][0]);
+					document.getElementById("team5Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[4][0]));
+					document.getElementById("team5Color"+i).style.border = '2px solid';
+					document.getElementById("team5Color"+i).style.borderColor = 'black';
+					if (removedTeam.length >= 6){document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][5] == 1 && removedTeam.length >= 6){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team6Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team6Color"+i).setAttribute('bgcolor',removedTeam[5][0]);
+					document.getElementById("team6Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[5][0]));
+					document.getElementById("team6Color"+i).style.border = '2px solid';
+					document.getElementById("team6Color"+i).style.borderColor = 'black';
+					if (removedTeam.length >= 7){document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');}
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][6] == 1 && removedTeam.length >= 7){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team7Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team7Color"+i).setAttribute('bgcolor',removedTeam[6][0]);
+					document.getElementById("team7Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[6][0]));
+					document.getElementById("team7Color"+i).style.border = '2px solid';
+					document.getElementById("team7Color"+i).style.borderColor = 'black';
+					if (removedTeam.length >= 8){document.getElementById("team8Color"+i).setAttribute('bgcolor','darkgray');}
+				} else if (statGlobal[i][7] == 1 && removedTeam.length >= 8){
+					document.getElementById("team1Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team2Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team3Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team4Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team5Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team6Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team7Color"+i).setAttribute('bgcolor','darkgray');
+					document.getElementById("team8Color"+i).innerHTML = statGlobal[i][8];
+					document.getElementById("team8Color"+i).setAttribute('bgcolor',removedTeam[7][0]);
+					document.getElementById("team8Color"+i).style.color = getOpositeColor(hex2rgb(removedTeam[7][0]));
+					document.getElementById("team8Color"+i).style.border = '2px solid';
+					document.getElementById("team8Color"+i).style.borderColor = 'black';
+				}	
+			  }
+			}
+			
+		function searchColorInArray(array, color, player){
+			var count = 0; 
+			for(var i = 0; i < array.length; ++i){
+				if(array[i][0] == color && array[i][1] == player)
+				count++;
+			} return count; }
+			
+		function totalP1ServiceCountByColor(color){
+			var totalServiceTeamXP1;
+			for(var i = 0; i < serveTeam.length; ++i){ //alert(color); alert(serveTeam); alert(serveTeam[i][0]); alert(totalServiceTeamXP1);
+				if(serveTeam[i][0] == color) {totalServiceTeamXP1 = totalP1ServiceCountByTeam(serveTeam[i][1]);}
+			} return totalServiceTeamXP1; }
+
+		function totalP2ServiceCountByColor(color){
+			var totalServiceTeamXP2;
+			for(var i = 0; i < serveTeam.length; ++i){
+				if(serveTeam[i][0] == color) {totalServiceTeamXP2 = totalP2ServiceCountByTeam(serveTeam[i][1]);}
+			} return totalServiceTeamXP2; }
+		
+		function totalP1ServiceCountByTeam(x){
+			var totalServiceTeamXP1;
+			if (Number.isInteger(x/2) == false) { totalServiceTeamXP1 = Math.floor(x/2)+1; }
+			else {totalServiceTeamXP1 = x/2;} 
+				return totalServiceTeamXP1;
+			}
+		
+		function totalP2ServiceCountByTeam(x){ 
+			var totalServiceTeamXP2; 
+			if (Number.isInteger(x/2) == false) { totalServiceTeamXP2 = Math.floor(x/2); }
+			else { totalServiceTeamXP2 = x/2;} 
+				return totalServiceTeamXP2;
+			}
+		
+		function countServiceFault(){
+			var playerNameTeam =[];
+			
+			for (let i = 1; i <= removedTeam.length; i++) {		
+				var a = removedTeam[i-1][1].split(' ');	
+				playerNameTeam.push([a[0],a[1]]);
+				if (a != "") {
+					eval('var player1NameTeam' + i +' = playerNameTeam['+(i-1)+'][0];');
+					eval('var player2NameTeam' + i +' = playerNameTeam['+(i-1)+'][1];');
+					}
+				else {
+					eval('player1NameTeam' + i +' =\'P1\';');
+					eval('player2NameTeam' + i +' =\'P2\';');
+					}
+				}
+				
+			for (let i = 1; i <= removedTeam.length; i++) {
+				eval('var serviceFaultP1Team' + i + ' = searchColorInArray(serviceOut, removedTeam[' + (i-1) + '][0], player1NameTeam' + i + ');'); 
+				eval('var serviceFaultP2Team' + i + ' = searchColorInArray(serviceOut, removedTeam[' + (i-1) + '][0], player2NameTeam' + i + ');');
+			}
+		
+			var table=document.createElement('table');
+			table.setAttribute('align','center');
+			table.setAttribute('id','serviceTable');
+ 
+			var tbody=document.createElement('tbody');
+ 
+			var tr,td1,td2,td3;
+ 
+			for(i=1;i<= removedTeam.length*2;i++){
+				tr=document.createElement('tr');
+
+				td1=document.createElement('td');
+				td1.setAttribute('class','case11');
+				td1.setAttribute('id','serviceTeamColor'+i);
+								
+				td2=document.createElement('td');
+				td2.setAttribute('class','case11');
+				td2.setAttribute('id','totalServiceTeamColor'+i);
+								
+				td3=document.createElement('td');
+				td3.setAttribute('class','case11');
+				td3.setAttribute('id','serviceTeamCount'+i);
+				
+				tr.appendChild(td1);
+				tr.appendChild(td2);
+				tr.appendChild(td3);
+				tbody.appendChild(tr);				
+			}
+			table.appendChild(tbody);
+ 
+			var elt=document.getElementById('serviceStatTable');
+			while(elt.hasChildNodes())elt.removeChild(elt.lastChild);
+			elt.appendChild(table);
+
+			for(i=1,p=1;p<=removedTeam.length;i+=2,p++){
+			document.getElementById("serviceTeamColor"+i).setAttribute('bgcolor', removedTeam[p-1][0]);
+			document.getElementById("serviceTeamColor"+i).style.color = getOpositeColor(hex2rgb(removedTeam[p-1][0]));
+			document.getElementById("serviceTeamColor"+i).style.borderColor = 'black';
+			document.getElementById("serviceTeamColor"+i).innerHTML = eval('player1NameTeam' + p);
+			document.getElementById("serviceTeamColor"+(i+1)).setAttribute('bgcolor', removedTeam[p-1][0]);
+			document.getElementById("serviceTeamColor"+(i+1)).style.color = getOpositeColor(hex2rgb(removedTeam[p-1][0]));
+			document.getElementById("serviceTeamColor"+(i+1)).style.borderColor = 'black';
+			document.getElementById("serviceTeamColor"+(i+1)).innerHTML = eval('player2NameTeam' + p);
+			}	
+			
+			for(i=1;i<=removedTeam.length*2;i++){
+				document.getElementById("serviceTeamCount"+i).setAttribute('bgcolor','darkgray');
+				document.getElementById("totalServiceTeamColor"+i).setAttribute('bgcolor','darkgray');
+				document.getElementById("totalServiceTeamColor"+i).style.textAlign = 'center';
+				document.getElementById("serviceTeamCount"+i).style.width = '200px';
+				document.getElementById("serviceTeamCount"+i).style.color = "red";
+				document.getElementById("serviceTeamCount"+i).style.border = "none";
+				}
+			
+			for(c=1,p=1;p<=removedTeam.length;c+=2,p++){
+			for(i=0;i< eval('serviceFaultP1Team' + p);i++){document.getElementById("serviceTeamCount"+c).innerHTML += "  X  "; }
+			for(i=0;i< eval('serviceFaultP2Team' + p);i++){document.getElementById("serviceTeamCount"+(c+1)).innerHTML += "  X  "; }
+			}
+
+			for(i=1,p=1;p<=removedTeam.length;i+=2,p++){			
+			document.getElementById("totalServiceTeamColor"+i).innerHTML = totalP1ServiceCountByColor(removedTeam[p-1][0]);
+			document.getElementById("totalServiceTeamColor"+(i+1)).innerHTML = totalP2ServiceCountByColor(removedTeam[p-1][0]);
+			}			
+		}
+
+		function hideStat(){
+			document.getElementById('statTable').hidden = true;
+			document.getElementById('statTableau').hidden = true;
+			document.getElementById('serviceTab').hidden = true;
+			document.getElementById('serviceStatTable').hidden = true;
+		}		
+				
+		function updateCountdown() {
+		
+			const minutes = Math.floor(time / 60);
+			let seconds = time % 60;
+			
+			seconds = seconds < 10 ? '0' + seconds : seconds;
+			
+			countdownElMin.innerHTML = minutes;
+			countdownElSec.innerHTML = seconds;
+			time--;
+			
+			if ( minutes < 10 ){ countdownElMin.innerHTML = '0' + minutes;}
+			
+			if (( minutes == 00 && seconds <= 10 ) && ( minutes == 00 && seconds >= 01 )){
+			document.getElementById("countdown").style.color = "red";
+			play()
+			}
+											
+			if ( minutes == 00 && seconds == 00 ){
+			clearInterval(idInterval);
+			game_over = true;
+			document.getElementById('button').hidden = false;
+			document.getElementById('button2').hidden = true;
+			//document.getElementById('rank').hidden = false;
+			document.getElementById('nextup').hidden = true;
+			document.getElementById('cases1').hidden = true;
+			document.getElementById('cases2').hidden = true;
+			document.getElementById('countdown').hidden = true;
+			//document.getElementById('nextChallenger').disabled = false;
+			document.getElementById('button3').hidden = false; 
+			document.getElementById('buttons').hidden = true;  
+			document.getElementById('newGame').hidden = false;		
+			document.getElementById("endGame").hidden=false;
+							
+			document.getElementById('winTableLabel').hidden=false;
+			document.getElementById('winTable').hidden=false;
+			document.getElementById('pointsScored').hidden=false;
+			if (gameModeCheck == true && scores.length == 4){
+				document.getElementById("newGame").hidden=true;}
+			else {  
+			document.getElementById('newGame').hidden = false;}
+			
+			playApplause();
+			tri();
+			statAllGames.push(tab);
+			games++;
+			conffeti();
+			var interval1 = setInterval(playApplause, 2000);	
+			var interval2 = setInterval(conffeti, 2000);
+			
+			setTimeout(() => { clearInterval(interval1); }, 4000);		
+			setTimeout(() => { clearInterval(interval2); }, 4000);
+			}
+		}
+			
+		function play() { 
+			var audio = new Audio('https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3'); 
+			audio.play(); 
+		} 
+					
+		function playApplause() { 
+			var audio2 = new Audio('https://www.soundjay.com/human/applause-01.mp3'); 
+			audio2.play(); 
+		}
+			
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+		<script type="text/javascript">
+		const canvas = document.querySelector('#confetti-canvas');
+		function conffeti(){
+			var myConfetti = confetti.create(canvas, {
+			resize: true,
+			useWorker: true
+			});
+			myConfetti({
+			particleCount: 200,
+			spread: 80
+			});
+		}
+		  
+		let color;
+		function changeColor(x){	
+				color = document.getElementById("color"+x).value; 
+				document.getElementById("p"+x).style.backgroundColor = color; 
+				scores[x-1][0] = color;
+				nom[x-1][0] = color;
+				serveTeam[x-1][0] = color;
+				document.getElementById("p"+x).style.color = getOpositeColor(hex2rgb(scores[x-1][0]));
+			}
+			
+		let colorNewPlayer;
+		function changeNewPlayerColor(){ 
+				colorNewPlayer = document.getElementById("colorNewPlayer").value; 
+				document.getElementById("pNewPlayer").style.backgroundColor = colorNewPlayer;
+				scores[0][0] = colorNewPlayer;
+				nom[0][0] = colorNewPlayer;	 
+				serveTeam[0][0] = colorNewPlayer;	
+			}
+		
+		var tab1 = [];
+		var gameModeCheck;
+		
+		function newGame(){
+			//window.location = "content://0@media/external/file/20602"	
+		
+		for (let i = 0; i < scores.length; i++) {	
+		tab1.push([
+		scores[i][0],
+		scores[i][1],
+		searchColorInArray(matchResult,scores[i][0],"win"),
+		searchColorInArray(matchResult,scores[i][0],"lost"),
+		nom_back[i][1],
+		0,
+		]);
+		}
+		
+		var pointByColorTri1=[]; var bbb1;
+		let p=0;
+		while (p < scores.length){		
+		  for (let i=0; i < tabScoresBack.length; i++){
+		  	let a = tabScoresBack[i];
+		  	bbb1 = a.find((color) => color[0] === tab1[p][0]);
+		  	pointByColorTri1.push([0,0,0,0,0,0,0,0]); 	
+		  	if (typeof bbb1 != "undefined") {pointByColorTri1[p][i]=bbb1[1];}
+		  	} 
+		  	p++;
+		  }
+			
+		for (let i = 0; i < scores.length; i++) {
+		tab1[i][5]=pointByColorTri1[i].indexOf(scores[i][1]);
+		}	
+		
+		tab1 = tab1.sort((a, b) =>  b[1] - a[1] || b[2] - a[2] || a[3] - b[3] || a[5] - b[5]);
+		
+		//var l=scores.length;
+		
+		var l;
+		
+		if (gameModeCheck == true){ 
+			l=scores.length-1; enableTeamRemove1 = true; removeTeam(0); serveTeam.pop();}
+		else {l=scores.length;}
+		
+		enableTeamRemove1 = false;
+		
+		for (i=1;i<=l;i++){ 
+			scores[l-i]=[tab1[i-1][0],0];
+			nom[l-i]=[tab1[i-1][0],tab1[i-1][4]];
+			serveTeam[l-i]=[tab1[i-1][0],0];
+		}
+		document.getElementById("n"+(scores.length-1)).setAttribute ('class' , 'serve1');
+		servicePlayerName();
+		
+		scores_back = null;
+		nom_back = null;
+		game_over = true;
+		tab = [];
+		tab1 = [];
+		serviceOut = [];
+		tabScoresBack = [];
+		removedTeam = [];
+		tabNomsBack = [];
+		rb = false;
+		a=0;b=0;c=0;d=0;e=0;h=0;g=0;k=0;
+		serviceFaultTag =[];
+		gameResult = [];
+		matchResult = [];
+		pointByColor1 = [['#ee8a07',0]];
+		pointByColor2 = [['#00cc99',0]];
+		pointByColor3 = [['#76bae7',0]];
+		pointByColor4 = [['#1045fb',0]];
+		pointByColor5 = [['#ee8a07',0]];
+		pointByColor6 = [['#00cc99',0]];
+		pointByColor7 = [['#76bae7',0]];
+		pointByColor8 = [['#1045fb',0]];
+		statPoint1 = [];
+		statPoint2 = [];
+		statPoint3 = [];
+		statPoint4 = [];
+		statPoint5 = [];
+		statPoint6 = [];
+		statPoint7 = [];
+		statPoint8 = [];
+		stat1 = [];
+		stat2 = [];
+		stat3 = [];
+		stat4 = [];
+		stat5 = [];
+		stat6 = [];
+		stat7 = [];
+		stat8 = [];
+		statGlobal = [[0,0,0,0,0]];
+		counter = 0;
+		rollbackCounter = 0;
+		forwardCounter = 0;
+		idInterval=0;
+		element=0;
+		startingMinutes=0;
+		if(gameModeCheck == true && tt > 10){time = (tt-5)*60; countdownElMin.innerHTML = tt-5;}
+		else {time = tt*60; countdownElMin.innerHTML = tt;}
+		countdownElSec.innerHTML = "00";
+		
+		document.getElementById("countdown").style.color = "black";	
+		
+		load();
+		testNom();
+		
+		document.getElementById('triTable').hidden=true;
+		document.getElementById('serviceTable').hidden=true;
+		document.getElementById('pointsTable').hidden=true;
+		document.getElementById('tabHeader').hidden=true;
+		document.getElementById('winTableLabel').hidden=true;
+		document.getElementById('winTable').hidden=true;
+		document.getElementById('serviceTab').hidden=true;
+		document.getElementById('statTableau').hidden=true;
+		document.getElementById('pointsScored').hidden=true;
+		document.getElementById('nextup').hidden=false;
+		document.getElementById('cases1').hidden=false;
+		document.getElementById('cases2').hidden=false;
+		document.getElementById('buttons').hidden=false;
+		document.getElementById('countdown').hidden=false; 
+		document.getElementById('newGame').hidden = true;		
+		document.getElementById("endGame").hidden=true;
+		document.getElementById("statTeam5").hidden=true;
+		document.getElementById("statTeam6").hidden=true;
+		document.getElementById("statTeam7").hidden=true;
+		document.getElementById("statTeam8").hidden=true;
+		document.getElementById("teamManager").hidden=true;
+		document.getElementById('nextChallenger').disabled = true;
+		document.getElementById('rollback').hidden = true;
+		document.getElementById('forward').hidden = true;
+		document.getElementById("finalStatTable1").hidden=true;
+		document.getElementById("finalStatTable").hidden=true;
+		
+		}
+              
+
+    //function shuffle(array1, array2) {
+    //let currentIndex = array1.length, randomIndex; // While there remain elements to shuffle.
+    //while (currentIndex > 0) { // Pick a remaining element.
+    //  randomIndex = Math.floor(Math.random() * currentIndex);
+    //  currentIndex--; // And swap it with the current element.
+    //
+              //[array1[currentIndex][0], array1[randomIndex][0]] = [ array1[randomIndex][0], array1[currentIndex][0]];
+              //[array2[currentIndex][0], array2[randomIndex][0]] = [ array2[randomIndex][0], array2[currentIndex][0]];
+              //[array2[currentIndex][1], array2[randomIndex][1]] = [ array2[randomIndex][1], array2[currentIndex][1]];
+
+    //
+              //} return array1, array2; }
+
+      function shuffle() {
+		let currentIndex = scores.length, randomIndex;
+		tabScoresBack.pop();
+		tabNomsBack.pop();
+		while (currentIndex > 0) { 
+                  randomIndex = Math.floor(Math.random() * currentIndex);
+                  currentIndex--;
+                [scores[currentIndex][0], scores[randomIndex][0]] = [ scores[randomIndex][0], scores[currentIndex][0]];
+                [nom[currentIndex][0], nom[randomIndex][0]] = [ nom[randomIndex][0], nom[currentIndex][0]];
+                [nom[currentIndex][1], nom[randomIndex][1]] = [ nom[randomIndex][1], nom[currentIndex][1]];
+            } 
+			scores_back = clone(scores);
+			nom_back = clone(nom);			
+			tabScoresBack.push(scores_back);
+			tabNomsBack.push(nom_back);
+			
+			load();
+        }
+
+		function wheelSound() { 
+			var audio = new Audio('content://0@media/external/file/20693'); 
+			audio.play(); 
+			}		   
+		   
+		function addNewPlayer(){
+
+			var td1,td2;
+			var nbr=scores.length;
+			var tdC=document.getElementById('c1');
+			var tdN=document.getElementById('n1');
+			var tr1=document.getElementById('challengerScore');
+			var tr2=document.getElementById('challengerName');
+			
+			if (scores.length <= 7 ){
+			for (let i = scores.length; i > 0; i--){
+			document.getElementById('c'+i).id = 'c'+(i+1);
+			document.getElementById('n'+i).id = 'n'+(i+1);
+			}
+			
+				td1=document.createElement('td');
+				td1.setAttribute('class','case1');
+				td1.setAttribute('id','c1');
+				eval('td1.setAttribute(\'onclick\',\'removeTeam('+counterRemovePlayer+')\');');
+				
+				td2=document.createElement('td');
+				td2.setAttribute('class','case3');
+				td2.setAttribute('id','n1'); 
+				
+				tr1.insertBefore(td1, tdC);
+				tr2.insertBefore(td2, tdN);
+				
+				scores.unshift([colorNewPlayerTab[colorNewPlayerCounter],0]);
+				nom.unshift([colorNewPlayerTab[colorNewPlayerCounter],"P1 P2"]); 
+				serveTeam.unshift([colorNewPlayerTab[colorNewPlayerCounter],0]);
+				
+                document.getElementById("newTeam").hidden=false;
+				document.getElementById('nextup').hidden = true;
+				document.getElementById('cases1').hidden = true;
+				document.getElementById('cases2').hidden = true;
+				document.getElementById('buttons').hidden = true;
+				document.getElementById('countdown').hidden = true;
+				//document.getElementById('nextChallenger').hidden = true;
+				document.getElementById("pNewPlayer").value="";	
+				
+				document.getElementById("colorNewPlayer").setAttribute('value',colorNewPlayerTab[colorNewPlayerCounter]);
+				document.getElementById("pNewPlayer").setAttribute('placeholder', 'Team '+counterPlayer);
+				document.getElementById("pNewPlayer").style.backgroundColor = colorNewPlayerTab[colorNewPlayerCounter];
+			
+			if ( nom[1][1] == "" && nom[2][1] == "" && nom[3][1] == "" && nom[4][1] == "" )
+			{document.getElementById('n1').hidden = true;}
+				
+
+			}
+			else {alert("The number max of players is 8. Please wait for the next game.")}
+			counterPlayer++;
+			
+		}
+		
+		
+        function saveNewPlayer() {
+			nom[0][1] = document.getElementById("pNewPlayer").value;
+            document.getElementById("c1").setAttribute('bgcolor', scores[0][0]);
+			document.getElementById("c1").style.color = getOpositeColor(hex2rgb(scores[0][0]));
+            document.getElementById("c1").innerHTML = scores[0][1];
+            document.getElementById("n1").setAttribute('bgcolor', nom[0][0]);
+			document.getElementById("n1").style.color = getOpositeColor(hex2rgb(nom[0][0]));
+            document.getElementById("n1").innerHTML = nom[0][1];
+				
+				scores_back = clone(scores);
+				nom_back = clone(nom);			
+				tabScoresBack.push(scores_back);
+				tabNomsBack.push(nom_back);
+				
+			document.getElementById('newTeam').hidden = true;
+			document.getElementById('nextup').hidden = false;
+			document.getElementById('cases1').hidden = false;
+			document.getElementById('cases2').hidden = false;
+			//document.getElementById("nextChallenger").hidden=false;
+			document.getElementById('buttons').hidden = false;
+			document.getElementById('countdown').hidden = false;							
+			document.getElementById('addNewPlayer').hidden = true;
+			document.getElementById('removeTeam').hidden = true;							
+			document.getElementById('rollback').hidden = false;
+			document.getElementById('forward').hidden = false;
+			document.getElementById('teamManager').hidden = false;
+			document.getElementById('teamManager2').hidden = true;
+			
+			colorNewPlayerCounter++;
+			
+			testNom();			
+		   }
+		   
+		 function cancelNewPlayer(){
+		 
+			var tdC=document.getElementById('c1');
+			var tdN=document.getElementById('n1');
+			var tr1=document.getElementById('challengerScore');
+			var tr2=document.getElementById('challengerName');
+		 
+		 		tr1.removeChild(tdC);
+				tr2.removeChild(tdN);
+		 
+		 	for (let i = 2; i <=scores.length; i++){
+			document.getElementById('c'+i).id = 'c'+(i-1);
+			document.getElementById('n'+i).id = 'n'+(i-1);
+			}
+				
+				scores.shift();
+				nom.shift();
+				serveTeam.shift();
+
+				document.getElementById('newTeam').hidden = true;
+				document.getElementById('nextup').hidden = false;
+				document.getElementById('cases1').hidden = false;
+				document.getElementById('cases2').hidden = false;
+				document.getElementById('buttons').hidden = false;
+				document.getElementById('countdown').hidden = false;
+				//document.getElementById('button3').hidden = false;							
+				document.getElementById('addNewPlayer').hidden = true;
+				document.getElementById('removeTeam').hidden = true;							
+				document.getElementById('rollback').hidden = false;
+				document.getElementById('forward').hidden = false;
+				document.getElementById('teamManager2').hidden = true;
+				document.getElementById('teamManager').hidden = false;
+				
+			counterPlayer--;
+		 }
+		 
+		 var counterPlayer = 5;
+		 var counterRemovePlayer = 3;
+		 var colorNewPlayerCounter = 0;
+		 var colorNewPlayerTab =['#f91a09', '#bcbcbc', '#e9ed74', '#cc33ff', '#ee8a07', '#00cc99', '#76bae7', '#1045fb',];
+		 		 
+		 
+		 function addPlayer(){
+			if (scores.length < 8){addPlayerExec();}
+			else {alert("The number max of players is 8. Please wait for the next game.")};	
+			}
+		 
+		 function addPlayerExec(){
+		 
+			var newtdN,newtdC;
+			var tdC=document.getElementById('c1');
+			var tdN=document.getElementById('n1');
+			var trN=document.getElementById('challengerName');
+			var trC=document.getElementById('challengerScore');
+
+			
+			for (let i = scores.length; i > 0; i--){ 
+			document.getElementById('c'+i).id = 'c'+(i+1);
+			document.getElementById('n'+i).id = 'n'+(i+1);
+			}
+			
+				newtdN=document.createElement('td');
+				newtdN.setAttribute('class','case3');
+				newtdN.setAttribute('id','n1');
+				
+				newtdC=document.createElement('td');
+				newtdC.setAttribute('class','case1');
+				newtdC.setAttribute('id','c1');
+				eval('newtdC.setAttribute(\'onclick\',\'removeTeam('+counterRemovePlayer+')\');');
+							
+				trC.insertBefore(newtdC, tdC);
+				trN.insertBefore(newtdN, tdN);
+		
+		 	scores.push([colorNewPlayerTab[colorNewPlayerCounter],0]);
+			nom.push([colorNewPlayerTab[colorNewPlayerCounter],"P1 P2"]);
+			serveTeam.push([colorNewPlayerTab[colorNewPlayerCounter],0]);
+				
+				
+			document.getElementById('n1').hidden = true;
+			document.getElementById('c1').hidden = true;
+				
+			var tbl,tr,td1,td2,td3, input1,input2,input3;
+					 
+			var tbl=document.getElementById('colorTab');
+ 
+				tr=document.createElement('tr');
+				tr.setAttribute('id','trColor'+counterPlayer);
+
+				td1=document.createElement('td');
+
+				input1=document.createElement('input');
+				input1.setAttribute('id','color'+counterPlayer);
+				input1.setAttribute('type','color');
+				input1.setAttribute('value',colorNewPlayerTab[colorNewPlayerCounter]);
+				eval('input1.setAttribute(\'onchange\',\'changeColor('+counterPlayer+')\');');
+								
+				td2=document.createElement('td');
+				
+				input2=document.createElement('input');
+				input2.setAttribute('class','case13');
+				input2.setAttribute('placeholder', 'Team '+counterPlayer);
+				input2.setAttribute('id','p'+counterPlayer);
+				input2.style.backgroundColor = colorNewPlayerTab[colorNewPlayerCounter];
+
+				td3=document.createElement('td');
+				
+				input3=document.createElement('button');
+				input3.setAttribute('id','deleteColor'+counterPlayer);
+				input3.setAttribute('class','deletePlayer');
+				input3.style.backgroundColor = '#4B4A4B';
+				input3.style.color = 'white';
+				input3.style.width = '30px';
+				input3.style.height = '30px';
+				eval('input3.setAttribute(\'onclick\',\'deletePlayer('+counterPlayer+')\');');
+			
+								
+				td1.appendChild(input1);
+				td2.appendChild(input2);
+				td3.appendChild(input3);				
+				tr.appendChild(td1);
+				tr.appendChild(td2);
+				tr.appendChild(td3);
+				tbl.appendChild(tr);
+				
+				if (counterPlayer>5){
+					document.getElementById('deleteColor'+(counterPlayer-1)).hidden = true;}
+				
+			counterPlayer++;
+			colorNewPlayerCounter++;
+			counterRemovePlayer++;
+		 		
+		 }
+  
+  		function deletePlayer(x){
+			
+			var tbl=document.getElementById('colorTab');
+			var tr=document.getElementById('trColor'+x);
+			var tdC=document.getElementById('c1');
+			var tdN=document.getElementById('n1');
+			var tr1=document.getElementById('challengerScore');
+			var tr2=document.getElementById('challengerName');
+		 
+			tbl.removeChild(tr);
+		 	tr1.removeChild(tdC);
+			tr2.removeChild(tdN);
+									 
+		 	for (let i = 2; i <=scores.length; i++){
+			document.getElementById('c'+i).id = 'c'+(i-1);
+			document.getElementById('n'+i).id = 'n'+(i-1);
+			}	
+			
+			if (counterPlayer>6){
+				document.getElementById('deleteColor'+(counterPlayer-2)).hidden = false;}
+	
+			scores.pop();
+			nom.pop();
+			serveTeam.pop();
+			counterPlayer--;
+			colorNewPlayerCounter--;
+		}
+		
+		var enableTeamRemove1;
+		
+		function enableTeamRemove(){
+		
+		if(scores.length > 4){
+			enableTeamRemove1 = true;			
+							
+			document.getElementById('addNewPlayer').hidden = true;
+			document.getElementById('removeTeam').hidden = true;
+			document.getElementById("removingMessage").hidden=false;
+			document.getElementById("nextup").hidden=true;
+//			document.getElementById('teamManager').disabled = true;
+			document.getElementById("cases2").style.opacity = "0.2";
+			document.getElementById("cancelTeamRemoving").hidden=false;
+			document.getElementById("teamManager2").hidden=true;
+			document.getElementById('button').disabled = true;			
+			
+			for(i=1;i<=scores.length-2;i++){
+			document.getElementById("c"+i).setAttribute('class','shake case1');
+			document.getElementById("n"+i).setAttribute('class','shake case3');
+			}
+		   }
+		  else alert("You can not remove any team. The game requires a minimum 4 teams.");
+		}
+		
+		var removedTeam=[];
+		var allTeamsColor=[];
+		var allTeamsName=[];
+		
+		function removeTeam(y){
+			var tbl=document.getElementById('colorTab');
+			var tdC=document.getElementById('c1');
+			var tdN=document.getElementById('n1');
+			var tr1=document.getElementById('challengerScore');
+			var tr2=document.getElementById('challengerName');
+			
+			var index = scores.length-2-y; //alert(index+"  "+scores.length+"  "+y);
+			
+			removedTeam.push([scores[index][0],nom[index][1],scores[index][1]]);
+			
+			allTeamsColor.push(scores[index][0]);
+			allTeamsName.push(scores[index][0],nom[index][1]);
+			
+			if (enableTeamRemove1 == true){
+				tr1.removeChild(tdC);
+				tr2.removeChild(tdN);			
+			
+				document.getElementById("removingMessage").hidden=true;
+				document.getElementById("nextup").hidden=false;
+				document.getElementById('teamManager').disabled = false;
+				document.getElementById("cases2").style.opacity = "1";
+										
+				for (let i = 2; i <=scores.length; i++){
+					document.getElementById('c'+i).id = 'c'+(i-1);
+					document.getElementById('n'+i).id = 'n'+(i-1);
+				}
+
+				scores.splice(index,1);
+				nom.splice(index,1);
+				//serveTeam.splice(index,1);
+				counterPlayer--;
+		//		colorNewPlayerCounter--;
+				load();	
+				enableTeamRemove1 = false;
+				document.getElementById('rollback').hidden = false;
+				document.getElementById('forward').hidden = false;
+				document.getElementById('teamManager').hidden = false;
+				document.getElementById('cancelTeamRemoving').hidden = true;
+				document.getElementById('button').disabled = false;
+				
+			counterRemovePlayer--;
+			}			
+			
+			for(i=1;i<=scores.length-2;i++){
+			document.getElementById("c"+i).setAttribute('class','case1');
+			document.getElementById("n"+i).setAttribute('class','case3');
+			} 
+		  }
+  
+		function testNom(){
+  			var testNom=[]; 
+			
+			for (i=0; i< nom.length; i++){testNom.push([nom[i][1]]); }
+			
+			var test = testNom.some((elem) => elem !="");
+			if (test == true) { 
+				for (i=1;i<= scores.length;i++){document.getElementById('n'+i).hidden = false;}
+			}else {for (i=1;i<= scores.length;i++){document.getElementById('n'+i).hidden = true;}}
+		}
+		
+		function endGame(){
+		
+			createTableForFinalStat();		
+		}
+					
+		function searchTeamColor(color, array){
+			var result='--';
+			for(var i = 0; i < array.length; ++i){ 
+				if(array[i][0] == color) {result = array[i][1]; }
+			} return result; }
+		
+		function createTableForFinalStat(){
+		
+		var table1=document.createElement('table');
+			table1.setAttribute('align','center');
+			table1.setAttribute('id','finalStatTable');
+        
+			var tbody=document.createElement('tbody');
+			
+			if (games == 2){ document.getElementById('gamesTeam2').hidden=false;}
+			if (games == 3){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;}
+			if (games == 4){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;
+							document.getElementById('gamesTeam4').hidden=false;}
+			if (games == 5){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;
+							document.getElementById('gamesTeam4').hidden=false;
+							document.getElementById('gamesTeam5').hidden=false;}
+			if (games == 6){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;
+							document.getElementById('gamesTeam4').hidden=false;
+							document.getElementById('gamesTeam5').hidden=false;
+							document.getElementById('gamesTeam6').hidden=false;}
+			if (games == 7){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;
+							document.getElementById('gamesTeam4').hidden=false;
+							document.getElementById('gamesTeam5').hidden=false;
+							document.getElementById('gamesTeam6').hidden=false;
+							document.getElementById('gamesTeam7').hidden=false;}
+			if (games == 8){ document.getElementById('gamesTeam2').hidden=false;
+							document.getElementById('gamesTeam3').hidden=false;
+							document.getElementById('gamesTeam4').hidden=false;
+							document.getElementById('gamesTeam5').hidden=false;
+							document.getElementById('gamesTeam6').hidden=false;
+							document.getElementById('gamesTeam7').hidden=false;
+							document.getElementById('gamesTeam8').hidden=false;}
+      				
+			var tdTeam1, tdTeam2, tdTeam3, tdTeam4, tdTeam5, tdTeam6, tdTeam7, tdTeam8;
+			var td1Game1, td1Game2, td1Game3, td1Game4, td1Game5, td1Game6, td1Game7, td1Game8, td2Game1, td2Game2, td2Game3, td2Game4, td2Game5, td2Game6, td2Game7, td2Game8, td3Game1, td3Game2, td3Game3, td3Game4, td3Game5, td3Game6, td3Game7, td3Game8, td4Game1, td4Game2, td4Game3, td4Game4, td4Game5, td4Game6, td4Game7, td4Game8, td5Game1, td5Game2, td5Game3, td5Game4, td5Game5, td5Game6, td5Game7, td5Game8, td6Game1, td6Game2, td6Game3, td6Game4, td6Game5, td6Game6, td6Game7, td6Game8, td7Game1, td7Game2, td7Game3, td7Game4, td7Game5, td7Game6, td7Game7, td7Game8, td8Game1, td8Game2, td8Game3, td8Game4, td8Game5, td8Game6, td8Game7, td8Game8;
+			//var tdTotal1, tdTotal2, tdTotal3, tdTotal4, tdTotal5, tdTotal6, tdTotal7, tdTotal8;
+			
+			for(i=0;i< allTeamsColor.length;i++){ 
+			setTab.push([0,0,0,0,0,0,0,0,0,0,0,0]);
+				setTab[i][0] = allTeamsColor[i];
+				setTab[i][1] = searchTeamColor(allTeamsColor[i], allTeamsName);
+				setTab[i][2] = searchColorInArray(winnerTab, allTeamsColor[i], "winner");
+				for(p=1;p<= games;p++){
+				 setTab[i][p+2]= searchTeamColor(allTeamsColor[i],statAllGames[p-1]);
+				} 
+			}
+			
+			if(gameModeCheck == false){ 
+				setTab = setTab.sort((a, b) =>  b[2] - a[2]);
+				document.getElementById("winner").innerHTML = setTab[0][1];
+				document.getElementById("winner").setAttribute('bgcolor', setTab[0][0]);
+				document.getElementById("winner").style.color = getOpositeColor(hex2rgb(setTab[0][0]));
+				document.getElementById("winner").style.borderColor = 'black';
+				}
+			else { setTab = setTab.sort((a, b) =>  b[p+1] - a[p+1]);}
+			
+			for(i=1;i<=allTeamsColor.length;i++){
+				tr=document.createElement('tr');
+				
+					eval('tdTeam' + i + '=document.createElement(\'td\');'); 
+					eval('tdTeam' + i + '.setAttribute(\'class\',\'case11\');');
+					eval('tdTeam' + i + '.setAttribute(\'id\',\'team' + i + '\');');
+					eval('tr.appendChild(tdTeam' + i + ');');
+				
+				for(p=1;p<= games;p++){
+					eval('td' +i+'Game'+ p + '=document.createElement(\'td\');'); 
+					eval('td' +i+'Game'+ p + '.setAttribute(\'class\',\'case11\');');
+					eval('td' +i+'Game'+ p + '.setAttribute(\'id\',\'game' + i + 'Team' + p + '\');');
+				eval('tr.appendChild(td' +i+'Game'+ p + ');');
+				}
+				
+					eval('tdSet' + i + '=document.createElement(\'td\');'); 
+					eval('tdSet' + i + '.setAttribute(\'class\',\'case11\');');
+					eval('tdSet' + i + '.setAttribute(\'id\',\'set' + i + '\');');			
+				eval('tr.appendChild(tdSet' + i + ');');
+				
+				tbody.appendChild(tr);						
+			}
+			table1.appendChild(tbody);
+        
+			var elt=document.getElementById('gamesTableau');
+			while(elt.hasChildNodes())elt.removeChild(elt.lastChild);
+			elt.appendChild(table1);
+			
+			for(i=1;i<=allTeamsColor.length;i++){ 
+				document.getElementById("team"+i).innerHTML = setTab[i-1][1];
+				document.getElementById("team"+i).setAttribute('bgcolor',setTab[i-1][0]);
+				document.getElementById("team"+i).style.color = getOpositeColor(hex2rgb(setTab[i-1][0]));
+				document.getElementById("team"+i).style.borderColor = 'black';
+				document.getElementById("team"+i).style.fontSize='9pt';
+				document.getElementById("team"+i).style.width='80px';
+				
+				for(p=1;p<= games;p++){
+				document.getElementById("game"+i+"Team"+p).innerHTML = setTab[i-1][p+2];
+				document.getElementById("game"+i+"Team"+p).setAttribute('bgcolor','darkgray');
+				document.getElementById("game"+i+"Team"+p).style.textAlign='center';
+				}
+				
+				
+				document.getElementById("set"+i).innerHTML = setTab[i-1][2];
+				document.getElementById("set"+i).setAttribute('bgcolor','darkgray');
+				document.getElementById("set"+i).style.textAlign='center';
+			}			
+
+			document.getElementById('triTable').hidden=true;
+			document.getElementById('serviceTable').hidden=true;
+			document.getElementById('pointsTable').hidden=true;
+			document.getElementById('tabHeader').hidden=true;
+			//document.getElementById('winTableLabel').hidden=true;
+			//document.getElementById('winTable').hidden=true;
+			document.getElementById('serviceTab').hidden=true;
+			document.getElementById('statTableau').hidden=true;
+			document.getElementById('pointsScored').hidden=true;	
+			document.getElementById("endGame").hidden=true;			
+			//document.getElementById('finalStatTable').hidden = false;	
+			document.getElementById('finalStatTable1').hidden = false;		
+			document.getElementById('gamesWin').hidden=false;	
+			
+			if(gameModeCheck == true){document.getElementById('gamesWin').hidden=true;
+				for(i=1;i<=allTeamsColor.length;i++){ 
+					document.getElementById("set"+i).hidden=true;}
+			}
+		}
+		
+		function getOpositeColor(rgb) { // Like this : rgb(0, 0, 0);
+		
+			while (rgb.indexOf(' ') != -1) rgb = rgb.replace(' ', '');
+			//Check if is formatted as RGB
+			if ((x = /([0-9]{0,3}),([0-9]{0,3}),([0-9]{0,3})/.exec(rgb))) {
+		
+				//Extract colors
+				color = {
+					'r': parseInt(x[1]),
+					'g': parseInt(x[2]),
+					'b': parseInt(x[3])
+				};
+				
+				//If is this operation be <= 128 return white, others else return black
+				OpositeColor = ((0.3 * (color['r'])) + (0.59 * (color['g'])) + (0.11 * (color['b'])) <= 90) ? '#FFF' : '#000';
+		
+			var a=(0.3 * (color['r'])) + (0.59 * (color['g'])) + (0.11 * (color['b']));
+		
+				return OpositeColor;
+			} 
+			return -1;
+		}
+		
+
+
+	</script>
+	</body>
+	</html>
