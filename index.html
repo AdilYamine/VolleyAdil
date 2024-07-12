@@ -55,7 +55,7 @@
         .case2-wrapped:after{
             content:" ";
             position: absolute;
-            background: url('InShot_20231113_212656171 (1).png');
+            background: url(content://0@media/external/file/21670);
             background-size: cover;
             width: 120px;
             height: 120px;
@@ -66,7 +66,7 @@
         .win-wrapped:after{
             content:" ";
             position: absolute;
-            background: url('InShot_20231111_055204035 (1).png');
+            background: url(content://0@media/external/file/21669);
             background-size: cover;
             width: 180px;
             height: 170px;
@@ -347,7 +347,7 @@
 				 
 				serviceCount();
 			
-                var tmp = scores[playerCount-2]; 
+                var tmp = scores[playerCount-2];
 				for (let i = playerCount-2; i > 0; i--) {
                 scores[i] = scores[i-1];
 				}
@@ -368,11 +368,11 @@
 				gameResult.push([scores[playerCount-2][0],2]);
 				matchResult.push([scores[playerCount-1][0],"win"],[scores[0][0],"lost"],);
 				}
-            } else if (a == 1) { 
+            } else if (a == 1) {  
 			if (game_over == false){
 			 
 				serviceCount();
-                scores[playerCount-1][1] = scores[playerCount-1][1] + 1; 
+                scores[playerCount-1][1] = scores[playerCount-1][1] + 1;
                 var tmp = scores[playerCount-2]; 
 				for (let i = playerCount-2; i > 0; i--) {
                 scores[i] = scores[i-1];
@@ -413,6 +413,7 @@
 				tabScoresBack.push(scores_back);
 				tabNomsBack.push(nom_back);
 				gameResult.push([scores[playerCount-2][0],3]); //alert(serveTeam); alert(scores);
+				matchResult.push([scores[0][0],"lost"],[scores[playerCount-1][0],"win"],);
 				serviceFaultOrder();
             }
             load();
@@ -788,8 +789,9 @@
 			//	colorNewPlayerCounter++;
 				counterRemovePlayer++;
 				testNom();
+				removedTeam.pop();
 			}
-			
+		
 			scores = clone(tabScoresBack[index]);
 			nom = clone(tabNomsBack[index]);
 			counter++;	
@@ -939,14 +941,15 @@
 				}
 				counterPlayer--;
 				colorNewPlayerCounter--;
-			}
-			
-			matchResult.push([tabScoresBack[index][scores.length-1][0],"win"],[tabScoresBack[index][0][0],"lost"],);
+			} 
+
+			matchResult.push([tabScoresBack[index][scores.length-2][0],"win"],[tabScoresBack[index][0][0],"lost"],);
+
 				scores = clone(tabScoresBack[index]);
 				nom = clone(tabNomsBack[index]);
 				counter--;				
 				testNom();
-				serviceOrder();
+				serviceOrder(); 
 				load();				
 			}
 		
@@ -1117,8 +1120,8 @@
 		return [ r, g, b ]
 	}
 
-        function load() {
-            for (let i = 1; i <= scores.length; i++) {
+        function load() { 
+            for (let i = 1; i <= scores.length; i++) { 
                 document.getElementById("c"+i).setAttribute('bgcolor', scores[i-1][0]);
                 document.getElementById("c"+i).innerHTML = scores[i-1][1];
 				document.getElementById("c"+i).style.color = getOpositeColor(hex2rgb(scores[i-1][0]));
@@ -1290,7 +1293,7 @@
 			</table>
             <table align="center">
               <tr>
-                  <td><img src="logo (1).png" width="200" height="300"></td>
+                  <td><img src="content://0@media/external/file/21671" width="200" height="300"></td>
                   <td style="color: grey">.........</td>
               </tr>
             </table>
@@ -1579,7 +1582,7 @@
 				document.getElementById("teamManager2").hidden=true;
 				document.getElementById('cancelTeamRemoving').hidden = true;
 				
-				if (rb == true){ 
+				if (rb == true){
 				   tabScoresBack.splice((tabScoresBack.length - counter), tabScoresBack.length );
 				   tabNomsBack.splice((tabNomsBack.length - counter), tabNomsBack.length );
 				   counter =0;				   
@@ -1595,7 +1598,7 @@
 			for(i=1;i<=scores.length-2;i++){
 			document.getElementById("c"+i).setAttribute('class','case1');
 			document.getElementById("n"+i).setAttribute('class','case3');
-			}
+			} 
 			}
 			
 			function pause(){
@@ -2667,8 +2670,11 @@
 				document.getElementById('teamManager').hidden = false;
 				document.getElementById('cancelTeamRemoving').hidden = true;
 				document.getElementById('button').disabled = false;
-				
-			counterRemovePlayer--;
+				scores_back = clone(scores);
+				nom_back = clone(nom);			
+				tabScoresBack.push(scores_back);
+				tabNomsBack.push(nom_back);
+				counterRemovePlayer--;
 			}			
 			
 			for(i=1;i<=scores.length-2;i++){
