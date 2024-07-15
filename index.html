@@ -924,6 +924,7 @@
 				counterPlayer++;
 				colorNewPlayerCounter++;
 				counterRemovePlayer++;
+				rollbackCounter++;
 			}
 			
 			if (scores.length > tabScoresBack[index].length){
@@ -941,6 +942,7 @@
 				}
 				counterPlayer--;
 				colorNewPlayerCounter--;
+				rollbackCounter++;
 			} 
 
 			matchResult.push([tabScoresBack[index][scores.length-2][0],"win"],[tabScoresBack[index][0][0],"lost"],);
