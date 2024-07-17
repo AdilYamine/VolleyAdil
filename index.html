@@ -332,6 +332,7 @@
 		var games=0;
 		var winnerTab=[];
 		var setTab=[[0,0,0,0,0,0,0,0,0,0,0,0]];
+		var updateName=false;
 		
         function f(a) { 
 		
@@ -893,7 +894,7 @@
 				else if (serveTeam[7][0] == scores[z][0]){k=k+1; serveTeam[7][1]= k ; }
 				}
 			
-				forwardServiceFault();
+				forwardServiceFault(); 
 				let index = (tabScoresBack.length - counter);
 				
 			if (scores.length < tabScoresBack[index].length){
@@ -1103,8 +1104,17 @@
 		testNom();
 			
 		load();
+		
+		modifyNameClickLoad();
+		
 		}
-			
+		
+		function modifyNameClickLoad(){		
+			for (let i = 1; i <= scores.length; i++){
+				document.getElementById('n'+i).setAttribute('onclick','modifyName('+i+')');
+			}
+		}
+		
         function clone(a) {
             let tmp=[];
             for( let i=0;i<a.length;i++) {
@@ -1140,7 +1150,7 @@
 			for (let i=0; i < scores.length; i++){
 				removedTeam.unshift([scores_back[i][0],nom_back[i][1],scores_back[i][1]]);
 				allTeamsColor.unshift(scores_back[i][0]);
-				allTeamsName.unshift([scores_back[i][0],nom_back[i][1]]);
+				allTeamsName.push([scores_back[i][0],nom_back[i][1]]);
 			}
 		
 			allTeamsColor = [...new Set(allTeamsColor)];
@@ -1333,7 +1343,10 @@
 				</td>
 			</tr>
 		</table>
-		
+		 
+		<input style= "font-weight:bold; width:205px; height:30px; font-size: 12pt;" id="text" maxlength="12" hidden></input>
+		<button style="background-color:#4B4A4B ; color:white; font-weight:bold; width:190px; height:30px; font-size: 10pt;" onclick="saveModifyName()" id='saveModifyName' hidden >OK</button>
+				
 		<table align="center" id="nextup" hidden>
 			<tr>
                 <td colspan="2" class="title" >>>> NEXT UP >>></td>
@@ -1342,8 +1355,8 @@
 		</table>
         <table align="center" id="cases1">
 			<tr id="challengerName">
-				<td class="case3" id="n1" hidden ></td>
-                <td class="case3" id="n2" hidden ></td>
+				<td class="case3" id="n1" onclick="modifyName(1)" hidden ></td>
+                <td class="case3" id="n2" onclick="modifyName(2)" hidden ></td>
             </tr>
             <tr id="challengerScore">
                 <td class="case1" onclick="removeTeam(2)" id="c1" hidden ></td>
@@ -1357,8 +1370,8 @@
                 <td class="crown title" id="kingside" hidden >KING SIDE</td>
             </tr>
             <tr>
-                <td class="case4" id="n3" hidden ></td>
-                <td class="case4" id="n4" hidden ></td>
+                <td class="case4" id="n3" onclick="modifyName(3)" hidden ></td>
+                <td class="case4" id="n4" onclick="modifyName(4)" hidden ></td>
             </tr>
             <tr>
 			    <td class="case2 case2-wrapped" onclick="f(2)" id="c3" hidden ></td>
@@ -1537,7 +1550,46 @@
 	</div>
 </body>
 <script>
-			
+		
+		var X;
+		function modifyName(x){ 
+		if (updateName == true){
+			document.getElementById('nextup').hidden = true;
+			document.getElementById('cases1').hidden = true;
+			document.getElementById('cases2').hidden = true;
+		
+			document.getElementById("text").hidden = false;
+			document.getElementById('saveModifyName').hidden = false;
+			document.getElementById("text").value =nom[x-1][1];
+			document.getElementById("text").style.backgroundColor = nom[x-1][0];
+			document.getElementById("teamManager").hidden = true;
+			document.getElementById("button").hidden = true;
+			document.getElementById("rollback").hidden = true;
+			document.getElementById("forward").hidden = true;
+			document.getElementById("countdown").hidden = true;
+			document.getElementById("nextChallenger").hidden = true;
+			X=x;
+		}
+		}
+		
+		
+		function saveModifyName(){
+		
+			nom[X-1][1] = document.getElementById("text").value;
+			load(); 
+			//document.getElementById("n"+X).innerHTML = document.getElementById("text").value;
+			document.getElementById("text").hidden = true;
+			document.getElementById('saveModifyName').hidden = true;
+			document.getElementById('nextup').hidden = false;
+			document.getElementById('cases1').hidden = false;
+			document.getElementById('cases2').hidden = false;
+			document.getElementById("teamManager").hidden = false;
+			document.getElementById("button").hidden = false;
+			document.getElementById("rollback").hidden = false;
+			document.getElementById("forward").hidden = false;
+			document.getElementById("countdown").hidden = false;
+			}
+	
 			var element;
 			var startingMinutes;
 			var tt;
@@ -1572,6 +1624,7 @@
 			function start(){
 				idInterval=setInterval(updateCountdown, 1000);
 				game_over = false;
+				updateName = false;
 				document.getElementById('button2').hidden = false;
 				document.getElementById('button').hidden = true;
 				document.getElementById('nextChallenger').disabled = false;
@@ -1604,8 +1657,10 @@
 			}
 			
 			function pause(){
+			
 				clearInterval(idInterval);
 				game_over = true;
+				updateName = true;
 				//document.getElementById('nextChallenger').disabled = true;
 				document.getElementById('button').hidden = false;
 				document.getElementById('button2').hidden = true;
@@ -1618,9 +1673,11 @@
 				document.getElementById("nextChallenger").hidden=true;		
 				document.getElementById("teamManager").hidden=false;			
 				document.getElementById("teamManager").disabled=false;
+			
 			}
 			
-			function teamManager(){
+			function teamManager(){		 
+				updateName = false;
 				document.getElementById('addNewPlayer').hidden = false;
 				document.getElementById('removeTeam').hidden = false;
 				document.getElementById('rollback').hidden = true;
@@ -1629,7 +1686,8 @@
 				document.getElementById('teamManager2').hidden = false;					
 			}
 			
-			function teamManager2(){
+			function teamManager2(){		 
+				updateName = true;
 				document.getElementById('teamManager').hidden = false;
 				document.getElementById('teamManager2').hidden = true;	
 				document.getElementById('addNewPlayer').hidden = true;
@@ -1640,7 +1698,8 @@
 			
 			function cancelTeamRemoving(){
 				
-				enableTeamRemove1 = false;
+				enableTeamRemove1 = false;		 
+				updateName = true;
 				
 				document.getElementById("removingMessage").hidden=true;
 				document.getElementById("nextup").hidden=false;
@@ -2147,6 +2206,7 @@
 		}
 			
 		</script>
+		<script src="dist/long-press.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 		<script type="text/javascript">
 		const canvas = document.querySelector('#confetti-canvas');
@@ -2439,10 +2499,15 @@
 			
 			colorNewPlayerCounter++;
 			
-			testNom();			
+			testNom();	
+			
+			modifyNameClickLoad();	
+			
 		   }
 		   
 		 function cancelNewPlayer(){
+		 		 
+				updateName = true;
 		 
 			var tdC=document.getElementById('c1');
 			var tdN=document.getElementById('n1');
@@ -2477,7 +2542,7 @@
 				
 			counterPlayer--;
 		 }
-		 
+		 var counterName = 1;
 		 var counterPlayer = 5;
 		 var counterRemovePlayer = 3;
 		 var colorNewPlayerCounter = 0;
@@ -2683,6 +2748,8 @@
 			document.getElementById("c"+i).setAttribute('class','case1');
 			document.getElementById("n"+i).setAttribute('class','case3');
 			} 
+						
+			modifyNameClickLoad();
 		  }
   
 		function testNom(){
@@ -2704,7 +2771,7 @@
 		function searchTeamColor(color, array){
 			var result='--';
 			for(var i = 0; i < array.length; ++i){ 
-				if(array[i][0] == color) {result = array[i][1]; }
+				if(array[i][0] == color) {result = array[i][1];  }
 			} return result; }
 		
 		function createTableForFinalStat(){
