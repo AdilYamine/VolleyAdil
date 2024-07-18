@@ -844,8 +844,9 @@
 			serviceOrder();
 			matchResult.splice(matchResult.length-2, 2);
 			document.getElementById('forward').disabled = false;		
-            load(); 
+            		load(); 
 			rollbackServiceFault();
+			modifyNameClickLoad();
 
         }
 		
@@ -953,7 +954,8 @@
 				counter--;				
 				testNom();
 				serviceOrder(); 
-				load();				
+				load();	
+				modifyNameClickLoad();			
 			}
 		
 		function forwardServiceFault(){
