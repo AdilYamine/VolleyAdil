@@ -844,10 +844,11 @@
 			serviceOrder();
 			matchResult.splice(matchResult.length-2, 2);
 			document.getElementById('forward').disabled = false;		
-            		load(); 
+            load(); 
 			rollbackServiceFault();
-			modifyNameClickLoad();alert("eeeeee");
-		}
+			modifyNameClickLoad();
+
+        }
 		
 		function forward() {
 		
@@ -954,7 +955,8 @@
 				testNom();
 				serviceOrder(); 
 				load();	
-				modifyNameClickLoad();			
+
+				modifyNameClickLoad();				
 			}
 		
 		function forwardServiceFault(){
@@ -2279,9 +2281,12 @@
 		//var l=scores.length;
 		
 		var l;
-		
+		//var nbrTeamDisqualified = 2;
+
 		if (gameModeCheck == true){ 
 			l=scores.length-1; enableTeamRemove1 = true; removeTeam(0); serveTeam.pop();}
+			//l=scores.length-nbrTeamDisqualified; for (z=1;z<=nbrTeamDisqualified;z++){ enableTeamRemove1 = true; removeTeam(0);} serveTeam.pop();} // pour éliminer les X dernières équipes dans le classement
+			
 		else {l=scores.length;}
 		
 		enableTeamRemove1 = false;
