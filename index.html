@@ -6,7 +6,25 @@
     <title>Document</title>
 
     <style>
-
+	  .voiceOn::before {
+		font-family: fontAwesome;
+		content: "\f028\00a0";
+            	font-size: 10pt;
+         }
+	
+	 .voiceOff::before {
+		font-family: fontAwesome;
+		content: "\f026\00a0";
+            	font-size: 10pt;
+         }
+		
+	 .transparent-button {
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+        }
+		
 		.shake {
 			animation: shake-animation 3.5s ease infinite;
 			transform-origin: 50% 50%;
@@ -419,14 +437,19 @@
             }
             load();
 	    serviceOrder();
-			
-	  let utterance1 = new SpeechSynthesisUtterance("Next "+nom[playerCount-2][1]);
+		
+	window.speechSynthesis.cancel();
+	  
+	if (game_over == false && voice == true ){		
+		let utterance1 = new SpeechSynthesisUtterance("Next "+nom[playerCount-2][1]);
 	
-	  let voices = window.speechSynthesis.getVoices();
-	  utterance1.voice = voices[0]; 
-	  window.speechSynthesis.speak(utterance1);
+		let voices = window.speechSynthesis.getVoices();
+		utterance1.voice = voices[0]; 
+		window.speechSynthesis.speak(utterance1);
 				
-	  serviceCall();	    
+		serviceCall();
+	}
+	    
 		
 	   document.getElementById("rollback").disabled = false;
         }		
@@ -1308,7 +1331,9 @@
 <body onload="load()">
 
     <div class="content">
-	   	<label style="font-size: 30pt; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: gold" >King Of The Court</label></br>
+	   	<label style="font-size: 30pt; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: gold" >King Of The Court</label>
+        	<button class="transparent-button voiceOn"  onclick="voiceDisable()" id='voiceOn'   ></button>
+		<button class="transparent-button voiceOff"  onclick="voiceEnable()" id='voiceOff'  hidden ></button>
         </br>
 		<table align="center">	
 	        <tr>
@@ -1586,7 +1611,20 @@
 	</div>
 </body>
 <script>
+	
+		var voice = true;
+		function voiceDisable() {
+			voice=false;
+			document.getElementById('voiceOff').hidden = false;
+			document.getElementById('voiceOn').hidden = true;
+		}
 		
+		function voiceEnable() {
+			voice=true;
+			document.getElementById('voiceOn').hidden = false;
+			document.getElementById('voiceOff').hidden = true;
+		}
+	
 		var X;
 		function modifyName(x){ 
 		if (updateName == true){
