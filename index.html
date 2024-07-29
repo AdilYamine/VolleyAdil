@@ -418,11 +418,39 @@
 				serviceFaultOrder();
             }
             load();
-			serviceOrder();
+	    serviceOrder();
 			
-			document.getElementById("rollback").disabled = false;
-        }		
+	  let utterance1 = new SpeechSynthesisUtterance("Next "+nom[playerCount-2][1]);
+	
+	  let voices = window.speechSynthesis.getVoices();
+	  utterance1.voice = voices[0]; 
+	  window.speechSynthesis.speak(utterance1);
+				
+	  serviceCall();	    
 		
+	   document.getElementById("rollback").disabled = false;
+        }		
+
+	function serviceCall(){ 
+			
+		let z=scores.length-1;
+		var className = document.getElementById("n"+z).className;
+
+		if (serveTeam[0][0] == scores[z-1][0] || serveTeam[1][0] == scores[z-1][0] || serveTeam[2][0] == scores[z-1][0] || serveTeam[3][0] == scores[z-1][0] || serveTeam[4][0] == scores[z-1][0] || serveTeam[5][0] == scores[z-1][0] || serveTeam[6][0] == scores[z-1][0] || serveTeam[7][0] == scores[z-1][0]
+		){ 
+			if (className == 'serve1' ) { 
+				let utterance2 = new SpeechSynthesisUtterance("Service "+player1ServiceCall);
+				let voices = window.speechSynthesis.getVoices();
+				utterance2.voice = voices[0];
+				window.speechSynthesis.speak(utterance2);}
+			else if (className == 'serve2'){ 
+				let utterance2 = new SpeechSynthesisUtterance("Service "+player2ServiceCall);
+				let voices = window.speechSynthesis.getVoices();
+				utterance2.voice = voices[0];
+				window.speechSynthesis.speak(utterance2);}}
+				}		
+
+	
 		function serviceCount(){ //alert(scores[2][0]);
 		let z=scores.length-2;
 		
@@ -468,6 +496,8 @@
 			}
 		}
 
+		var player1ServiceCall, player2ServiceCall;
+		
 		function servicePlayerName(){
 
 			var playerNameTeam =[];
@@ -487,13 +517,16 @@
 					}
 				} 
 			servicePlayer1Name = player1NameTeam3;
-			servicePlayer2Name = player2NameTeam3;			
+			servicePlayer2Name = player2NameTeam3;	
+			player1ServiceCall = player1NameTeam2;	
+			player2ServiceCall = player2NameTeam2;
 
-			     if (scores.length == 5){servicePlayer1Name=player1NameTeam4;servicePlayer2Name=player2NameTeam4;} 
-			else if (scores.length == 6){servicePlayer1Name=player1NameTeam5;servicePlayer2Name=player2NameTeam5;} 
-			else if (scores.length == 7){servicePlayer1Name=player1NameTeam6;servicePlayer2Name=player2NameTeam6;} 
-			else if (scores.length == 8){servicePlayer1Name=player1NameTeam7;servicePlayer2Name=player2NameTeam7;}
+			     if (scores.length == 5){servicePlayer1Name=player1NameTeam4;servicePlayer2Name=player2NameTeam4; player1ServiceCall = player1NameTeam3;	player2ServiceCall = player2NameTeam3;} 
+			else if (scores.length == 6){servicePlayer1Name=player1NameTeam5;servicePlayer2Name=player2NameTeam5; player1ServiceCall = player1NameTeam4;	player2ServiceCall = player2NameTeam4;} 
+			else if (scores.length == 7){servicePlayer1Name=player1NameTeam6;servicePlayer2Name=player2NameTeam6; player1ServiceCall = player1NameTeam5;	player2ServiceCall = player2NameTeam5;} 
+			else if (scores.length == 8){servicePlayer1Name=player1NameTeam7;servicePlayer2Name=player2NameTeam7; player1ServiceCall = player1NameTeam6;	player2ServiceCall = player2NameTeam6;}
 		}
+
 
 		function serviceOrder(){ 
 		
