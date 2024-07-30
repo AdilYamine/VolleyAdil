@@ -442,7 +442,7 @@
 	  
 	if (game_over == false && voice == true ){		
 		let utterance1 = new SpeechSynthesisUtterance("Next "+nom[playerCount-2][1]);
-	
+		utterance1.rate = 0.8;
 		let voices = window.speechSynthesis.getVoices();
 		utterance1.voice = voices[0]; 
 		window.speechSynthesis.speak(utterance1);
@@ -465,11 +465,13 @@
 				let utterance2 = new SpeechSynthesisUtterance("Service "+player1ServiceCall);
 				let voices = window.speechSynthesis.getVoices();
 				utterance2.voice = voices[0];
+				utterance2.rate = 0.8;
 				window.speechSynthesis.speak(utterance2);}
 			else if (className == 'serve2'){ 
 				let utterance2 = new SpeechSynthesisUtterance("Service "+player2ServiceCall);
 				let voices = window.speechSynthesis.getVoices();
 				utterance2.voice = voices[0];
+				utterance2.rate = 0.8;
 				window.speechSynthesis.speak(utterance2);}}
 				}		
 
