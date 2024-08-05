@@ -441,7 +441,7 @@
 	window.speechSynthesis.cancel();
 	  
 	if (game_over == false && voice == true ){		
-		let utterance1 = new SpeechSynthesisUtterance("Nextt "+nom[playerCount-2][1]);
+		let utterance1 = new SpeechSynthesisUtterance("Next "+nom[playerCount-2][1]);
 		utterance1.rate = 0.8;
 		let voices = window.speechSynthesis.getVoices();
 		utterance1.voice = voices[0]; 
